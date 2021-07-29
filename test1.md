@@ -7,6 +7,15 @@
     </head>
 
     <body>
+        <h1>Name of the article <br/><br/></h1>
+        
+        <!-- Toolbar -->
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="article.html">Articles</a>
+            <a href="write-up.html">Write-up</a>
+        </div>
+
         <code>
             *** Code Markdown ***
             *********************
@@ -14,6 +23,7 @@
             # Introduction
 
             ## Prout Prout
+            
             *** Export HTML ***
             *******************
         </code>
@@ -25,4 +35,3 @@
 
     </body>
 </html>
-
