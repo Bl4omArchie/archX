@@ -16,14 +16,12 @@ L'application est accessible sous sous windows, linux et OS X.
 ## 2. Installation
 
 Pour installer SageMath, rien de plus simple, allez sur la page suivante: https://www.sagemath.org/ et sélectionnez la distribution de votre ordinateur (windows, linux etc): 
-![download](https://github.com/Bl4omArchie/archX/article/images/download.PNG "download")
+![download](https://github.com/Bl4omArchie/archX/blob/main/article/images/download.PNG "download")
 Puis ensuite votre nationalité et enfin prenez la version de votre choix (par défaut prenez la dernière), enregistrez l'exécutable (.exe), exécutez le et suivez les instructions. Sage est maintenant installé et prêt à être utilisé ! (si vous avez une erreur, lisez bien le message pour régler le problème)
 
 ## 3. Les différentes applications
 
-A la fin de l'installation, trois icônes apparaitront sur votre bureau. ![Logos sage](https://github.com/Bl4omArchie/archX/article/images/logo_sage.PNG "logo sage")
+A la fin de l'installation, trois icônes apparaitront sur votre bureau. ![Logos sage](https://github.com/Bl4omArchie/archX/blob/main/article/images/logo_sage.PNG "logo sage")
 La première est la ligne de commande, la deuxième le shell et la troisième le notebook.
 
 ## 4. Premiers calculs
-
-## 5. Utilisation des graphiques
