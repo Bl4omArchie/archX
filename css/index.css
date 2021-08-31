@@ -7,11 +7,15 @@ h1{
     size: 60px;
     text-align: center;     
     text-decoration: underline;     
+    text-decoration-color: #04AA6D;
 }
 
 h2{
-    color: white;
+    margin-left: 10px;
     size: 50px;
+    color: white;
+    text-decoration: underline;     
+    text-decoration-color: #04AA6D;
 }
 
 p{
@@ -20,10 +24,41 @@ p{
     size: 45px;
 }
 
+li{
+    size: 60px;
+    color: white;
+    font-family: Calibri;
+}
+
 a{
     color: #04AA6D;
     size: 50px;
 }
+
+.desc div{
+    overflow:hidden;
+}
+
+img{
+    margin-top: 5%;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border: medium solid #04AA6D;
+}
+
+span{
+    width:100%;
+    margin-left: 325px;
+    margin-top: -15px;
+    display:inline-block;
+    vertical-align:middle;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+
 
 /*Tool bar*/
 /* Add a black background color to the top navigation */
