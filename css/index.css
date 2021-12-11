@@ -18,6 +18,14 @@ h2{
     text-decoration-color: #04AA6D;
 }
 
+h3{
+    margin-left: 5px;
+    size: 45px;
+    color: white;
+    text-decoration: underline;     
+    text-decoration-color: #04AA6D;
+}
+
 p{
     font-family: Calibri;
     color: white;
@@ -39,6 +47,10 @@ a{
     overflow:hidden;
 }
 
+mark{
+    background-color: red;
+}
+
 img{
     margin-top: 5%;
     background-size: cover;
@@ -58,6 +70,10 @@ span{
     -webkit-box-sizing:border-box;
 }
 
+table{
+    margin-left: 125px;
+    margin-right: 125px;
+}
 
 
 /*Tool bar*/
