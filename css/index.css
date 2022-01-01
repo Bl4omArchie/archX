@@ -1,62 +1,48 @@
+
 body{
     background-color: rgb(66, 60, 60);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1, h2, h3{
+    color: white;     
+    text-decoration: underline; 
+    text-decoration-thickness: 12%;
+    text-decoration-color: #04AA6D;
+    font-family: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
 }
 
 h1{
-    color: white;
-    size: 60px;
-    text-align: center;     
-    text-decoration: underline;     
-    text-decoration-color: #04AA6D;
+    text-align: center;
 }
 
 h2{
-    margin-left: 10px;
-    size: 50px;
-    color: white;
-    text-decoration: underline;     
-    text-decoration-color: #04AA6D;
+    margin-left: 10px
 }
 
 h3{
-    margin-left: 5px;
-    size: 45px;
-    color: white;
-    text-decoration: underline;     
-    text-decoration-color: #04AA6D;
+    margin-left: 5px
 }
 
-p{
-    font-family: Calibri;
-    color: white;
-    size: 45px;
-}
-
-li{
-    size: 60px;
-    color: white;
-    font-family: Calibri;
+p, li{
+    font-size: 18px;
+    color: #F9EAE1;
+    font-family: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
+    font-feature-settings: 'ss01' 1, 'zero' 1;
 }
 
 a{
-    color: #04AA6D;
-    size: 50px;
+    font-weight:bold;
+    color: #04AA6D
 }
 
 .desc div{
-    overflow:hidden;
+    overflow:hidden
 }
 
 mark{
-    background-color: red;
-}
-
-img{
-    margin-top: 5%;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
-    border: medium solid #04AA6D;
+    background-color: red
 }
 
 span{
@@ -80,6 +66,7 @@ table{
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;
+    border-radius: 7px;
     overflow: hidden;
 }
   
