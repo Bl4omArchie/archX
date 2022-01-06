@@ -1,6 +1,6 @@
 
 body{
-    background-color: rgb(66, 60, 60);
+    background-color: #434551;
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -27,7 +27,7 @@ h3{
 
 p, li{
     font-size: 18px;
-    color: #F9EAE1;
+    color: #fcfcfc;
     font-family: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
     font-feature-settings: 'ss01' 1, 'zero' 1;
 }
@@ -65,7 +65,7 @@ table{
 /*Tool bar*/
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background-color: #141212;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -74,8 +74,7 @@ table{
 .topnav a {
     float: left;
     color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 10px 170px;
     text-decoration: none;
     font-size: 17px;
     
