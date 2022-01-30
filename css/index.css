@@ -36,6 +36,14 @@ a{
     color: #04AA6D
 }
 
+form{
+    margin-left: 750px;
+}
+
+input, button{
+    padding: 7px 125px;
+}
+
 .desc div{
     overflow:hidden
 }
@@ -80,8 +88,15 @@ table{
     color: black;
 }
   
-  /* Add a color to the active/current link */
+/* Add a color to the active/current link */
 .topnav a.active {
     background-color: #04AA6D;
     color: white;
+}
+
+/* Presentation for write-up and article*/
+.article {
+    margin-left: 25%;
+    padding: 50px;
+    line-height: 30px;
 }
