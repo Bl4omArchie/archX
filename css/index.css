@@ -97,6 +97,7 @@ table{
 /* Presentation for write-up and article*/
 .article {
     margin-left: 25%;
+    margin-right: 25%;
     padding: 50px;
     line-height: 30px;
 }
