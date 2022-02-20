@@ -68,6 +68,8 @@ table{
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #141212;
+    margin-left: 10%;
+    margin-right: 10%;
     border-radius: 7px;
     overflow: hidden;
 }
@@ -101,3 +103,4 @@ table{
     padding: 50px;
     line-height: 30px;
 }
+
