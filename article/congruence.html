@@ -12669,604 +12669,585 @@ span.autosave_status {
   }
   span.autosave_status {
     font-size: x-small;
+    }
   }
-}
-.toolbar {
-  padding: 0px;
-  margin-left: -5px;
-  margin-top: 2px;
-  margin-bottom: 5px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.toolbar select,
-.toolbar label {
-  width: auto;
-  vertical-align: middle;
-  margin-right: 2px;
-  margin-bottom: 0px;
-  display: inline;
-  font-size: 92%;
-  margin-left: 0.3em;
-  margin-right: 0.3em;
-  padding: 0px;
-  padding-top: 3px;
-}
-.toolbar .btn {
-  padding: 2px 8px;
-}
-.toolbar .btn-group {
-  margin-top: 0px;
-  margin-left: 5px;
-}
-.toolbar-btn-label {
-  margin-left: 6px;
-}
-#maintoolbar {
-  margin-bottom: -3px;
-  margin-top: -8px;
-  border: 0px;
-  min-height: 27px;
-  margin-left: 0px;
-  padding-top: 11px;
-  padding-bottom: 3px;
-}
-#maintoolbar .navbar-text {
-  float: none;
-  vertical-align: middle;
-  text-align: right;
-  margin-left: 5px;
-  margin-right: 0px;
-  margin-top: 0px;
-}
-.select-xs {
-  height: 24px;
-}
-[dir="rtl"] .btn-group > .btn,
-.btn-group-vertical > .btn {
-  float: right;
-}
-.pulse,
-.dropdown-menu > li > a.pulse,
-li.pulse > a.dropdown-toggle,
-li.pulse.open > a.dropdown-toggle {
-  background-color: #F37626;
-  color: white;
-}
-/**
- * Primary styles
- *
- * Author: Jupyter Development Team
- */
-/** WARNING IF YOU ARE EDITTING THIS FILE, if this is a .css file, It has a lot
- * of chance of beeing generated from the ../less/[samename].less file, you can
- * try to get back the less file by reverting somme commit in history
- **/
-/*
- * We'll try to get something pretty, so we
- * have some strange css to have the scroll bar on
- * the left with fix button on the top right of the tooltip
- */
-@-moz-keyframes fadeOut {
-  from {
+  .toolbar {
+    padding: 0px;
+    margin-left: -5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  .toolbar select,
+  .toolbar label {
+    width: auto;
+    vertical-align: middle;
+    margin-right: 2px;
+    margin-bottom: 0px;
+    display: inline;
+    font-size: 92%;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    padding: 0px;
+    padding-top: 3px;
+  }
+  .toolbar .btn {
+    padding: 2px 8px;
+  }
+  .toolbar .btn-group {
+    margin-top: 0px;
+    margin-left: 5px;
+  }
+  .toolbar-btn-label {
+    margin-left: 6px;
+  }
+  #maintoolbar {
+    margin-bottom: -3px;
+    margin-top: -8px;
+    border: 0px;
+    min-height: 27px;
+    margin-left: 0px;
+    padding-top: 11px;
+    padding-bottom: 3px;
+  }
+  #maintoolbar .navbar-text {
+    float: none;
+    vertical-align: middle;
+    text-align: right;
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  .select-xs {
+    height: 24px;
+  }
+  [dir="rtl"] .btn-group > .btn,
+  .btn-group-vertical > .btn {
+    float: right;
+  }
+  .pulse,
+  .dropdown-menu > li > a.pulse,
+  li.pulse > a.dropdown-toggle,
+  li.pulse.open > a.dropdown-toggle {
+    background-color: #F37626;
+    color: white;
+  }
+  /**
+  * Primary styles
+  *
+  * Author: Jupyter Development Team
+  */
+  /** WARNING IF YOU ARE EDITTING THIS FILE, if this is a .css file, It has a lot
+  * of chance of beeing generated from the ../less/[samename].less file, you can
+  * try to get back the less file by reverting somme commit in history
+  **/
+  /*
+  * We'll try to get something pretty, so we
+  * have some strange css to have the scroll bar on
+  * the left with fix button on the top right of the tooltip
+  */
+  @-moz-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  @-moz-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /*properties of tooltip after "expand"*/
+  .bigtooltip {
+    overflow: auto;
+    height: 200px;
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 500ms;
+    -moz-transition-property: height;
+    -moz-transition-duration: 500ms;
+    transition-property: height;
+    transition-duration: 500ms;
+  }
+  /*properties of tooltip before "expand"*/
+  .smalltooltip {
+    -webkit-transition-property: height;
+    -webkit-transition-duration: 500ms;
+    -moz-transition-property: height;
+    -moz-transition-duration: 500ms;
+    transition-property: height;
+    transition-duration: 500ms;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 85px;
+  }
+  .tooltipbuttons {
+    position: absolute;
+    padding-right: 15px;
+    top: 0px;
+    right: 0px;
+  }
+  .tooltipbuttons .ui-button {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .tooltiptext {
+    /*avoid the button to overlap on some docstring*/
+    padding-right: 30px;
+    /*avoid the ui-icon(s) from overlapping the tooltip*/
+    padding-top: 5px;
+  }
+  .ipython_tooltip {
+    max-width: 700px;
+    /*fade-in animation when inserted*/
+    -webkit-animation: fadeOut 400ms;
+    -moz-animation: fadeOut 400ms;
+    animation: fadeOut 400ms;
+    -webkit-animation: fadeIn 400ms;
+    -moz-animation: fadeIn 400ms;
+    animation: fadeIn 400ms;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+    overflow: visible;
+    border: #ababab 1px solid;
+    outline: none;
+    padding: 3px;
+    margin: 0px;
+    padding-left: 7px;
+    font-family: monospace;
+    min-height: 50px;
+    -moz-box-shadow: 0px 6px 10px -1px #adadad;
+    -webkit-box-shadow: 0px 6px 10px -1px #adadad;
+    box-shadow: 0px 6px 10px -1px #adadad;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1000;
+  }
+  .ipython_tooltip a {
+    float: right;
+  }
+  .ipython_tooltip .tooltiptext pre {
+    border: 0;
+    border-radius: 0;
+    font-size: 100%;
+    background-color: #f7f7f7;
+  }
+  .pretooltiparrow {
+    left: 0px;
+    margin: 0px;
+    top: -16px;
+    width: 40px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+  }
+  .pretooltiparrow:before {
+    background-color: #f7f7f7;
+    border: 1px #ababab solid;
+    z-index: 11;
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 25px;
+    height: 25px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+  ul.typeahead-list i {
+    margin-left: -10px;
+    width: 18px;
+  }
+  [dir="rtl"] ul.typeahead-list i {
+    margin-left: 0;
+    margin-right: -10px;
+  }
+  ul.typeahead-list {
+    max-height: 80vh;
+    overflow: auto;
+  }
+  ul.typeahead-list > li > a {
+    /** Firefox bug **/
+    /* see https://github.com/jupyter/notebook/issues/559 */
+    white-space: normal;
+  }
+  ul.typeahead-list  > li > a.pull-right {
+    float: left !important;
+    float: left;
+  }
+  [dir="rtl"] .typeahead-list {
+    text-align: right;
+  }
+  .cmd-palette .modal-body {
+    padding: 7px;
+  }
+  .cmd-palette form {
+    background: white;
+  }
+  .cmd-palette input {
+    outline: none;
+  }
+  .no-shortcut {
+    min-width: 20px;
+    color: transparent;
+  }
+  [dir="rtl"] .no-shortcut.pull-right {
+    float: left !important;
+    float: left;
+  }
+  [dir="rtl"] .command-shortcut.pull-right {
+    float: left !important;
+    float: left;
+  }
+  .command-shortcut:before {
+    content: "(command mode)";
+    padding-right: 3px;
+    color: #777777;
+  }
+  .edit-shortcut:before {
+    content: "(edit)";
+    padding-right: 3px;
+    color: #777777;
+  }
+  [dir="rtl"] .edit-shortcut.pull-right {
+    float: left !important;
+    float: left;
+  }
+  #find-and-replace #replace-preview .match,
+  #find-and-replace #replace-preview .insert {
+    background-color: #BBDEFB;
+    border-color: #90CAF9;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0px;
+  }
+  [dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+    border-left: none;
+  }
+  [dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+    border-right: none;
+  }
+  #find-and-replace #replace-preview .replace .match {
+    background-color: #FFCDD2;
+    border-color: #EF9A9A;
+    border-radius: 0px;
+  }
+  #find-and-replace #replace-preview .replace .insert {
+    background-color: #C8E6C9;
+    border-color: #A5D6A7;
+    border-radius: 0px;
+  }
+  #find-and-replace #replace-preview {
+    max-height: 60vh;
+    overflow: auto;
+  }
+  #find-and-replace #replace-preview pre {
+    padding: 5px 10px;
+  }
+  .terminal-app {
+    background: #eeeeee;
+  }
+  .terminal-app #header {
+    background: #ffffff;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
+  }
+  .terminal-app .terminal {
+    width: 100%;
+    float: left;
+    font-family: monospace;
+    color: white;
+    background: black;
+    padding: 0.4em;
+    border-radius: 2px;
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
+    line-height: 1em;
+    font-size: 14px;
+  }
+  .terminal-app .terminal .xterm-rows {
+    padding: 10px;
+  }
+  .terminal-app .terminal-cursor {
+    color: black;
+    background: white;
+  }
+  .terminal-app .terminado-container-container {
+    padding-top: 20px;
+    height: 100%;
+  }
+  .terminal-app #terminado-container {
+    height: 100%;
+  }
+  .btn-danger {
+    color: #ffffff;
+    background-color: #df0404;
+    border-color: #df0404;
+  }
+  .btn-warning {
+    color: #ffffff;
+    background-color: #b46102;
+    border-color: #b46102;
+  }
+  .close {
+    float: right;
+    font-size: 19.5px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=100);
     opacity: 1;
   }
-  to {
-    opacity: 0;
+  button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
   }
-}
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
+  .navbar-nav > li > a {
+    color: #565656;
   }
-  to {
-    opacity: 0;
+  .navbar-nav > li > a:focus {
+    /* -webkit-focus-ring-color = '#5B9DD9' */
+    outline: -webkit-focus-ring-color auto 5px;
   }
-}
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/*properties of tooltip after "expand"*/
-.bigtooltip {
-  overflow: auto;
-  height: 200px;
-  -webkit-transition-property: height;
-  -webkit-transition-duration: 500ms;
-  -moz-transition-property: height;
-  -moz-transition-duration: 500ms;
-  transition-property: height;
-  transition-duration: 500ms;
-}
-/*properties of tooltip before "expand"*/
-.smalltooltip {
-  -webkit-transition-property: height;
-  -webkit-transition-duration: 500ms;
-  -moz-transition-property: height;
-  -moz-transition-duration: 500ms;
-  transition-property: height;
-  transition-duration: 500ms;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  height: 85px;
-}
-.tooltipbuttons {
-  position: absolute;
-  padding-right: 15px;
-  top: 0px;
-  right: 0px;
-}
-.tooltipbuttons .ui-button {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-.tooltiptext {
-  /*avoid the button to overlap on some docstring*/
-  padding-right: 30px;
-  /*avoid the ui-icon(s) from overlapping the tooltip*/
-  padding-top: 5px;
-}
-.ipython_tooltip {
-  max-width: 700px;
-  /*fade-in animation when inserted*/
-  -webkit-animation: fadeOut 400ms;
-  -moz-animation: fadeOut 400ms;
-  animation: fadeOut 400ms;
-  -webkit-animation: fadeIn 400ms;
-  -moz-animation: fadeIn 400ms;
-  animation: fadeIn 400ms;
-  vertical-align: middle;
-  background-color: #f7f7f7;
-  overflow: visible;
-  border: #ababab 1px solid;
-  outline: none;
-  padding: 3px;
-  margin: 0px;
-  padding-left: 7px;
-  font-family: monospace;
-  min-height: 50px;
-  -moz-box-shadow: 0px 6px 10px -1px #adadad;
-  -webkit-box-shadow: 0px 6px 10px -1px #adadad;
-  box-shadow: 0px 6px 10px -1px #adadad;
-  border-radius: 2px;
-  position: absolute;
-  z-index: 1000;
-}
-.ipython_tooltip a {
-  float: right;
-}
-.ipython_tooltip .tooltiptext pre {
-  border: 0;
-  border-radius: 0;
-  font-size: 100%;
-  background-color: #f7f7f7;
-}
-.pretooltiparrow {
-  left: 0px;
-  margin: 0px;
-  top: -16px;
-  width: 40px;
-  height: 16px;
-  overflow: hidden;
-  position: absolute;
-}
-.pretooltiparrow:before {
-  background-color: #f7f7f7;
-  border: 1px #ababab solid;
-  z-index: 11;
-  content: "";
-  position: absolute;
-  left: 15px;
-  top: 10px;
-  width: 25px;
-  height: 25px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-}
-ul.typeahead-list i {
-  margin-left: -10px;
-  width: 18px;
-}
-[dir="rtl"] ul.typeahead-list i {
-  margin-left: 0;
-  margin-right: -10px;
-}
-ul.typeahead-list {
-  max-height: 80vh;
-  overflow: auto;
-}
-ul.typeahead-list > li > a {
-  /** Firefox bug **/
-  /* see https://github.com/jupyter/notebook/issues/559 */
-  white-space: normal;
-}
-ul.typeahead-list  > li > a.pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .typeahead-list {
-  text-align: right;
-}
-.cmd-palette .modal-body {
-  padding: 7px;
-}
-.cmd-palette form {
-  background: white;
-}
-.cmd-palette input {
-  outline: none;
-}
-.no-shortcut {
-  min-width: 20px;
-  color: transparent;
-}
-[dir="rtl"] .no-shortcut.pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .command-shortcut.pull-right {
-  float: left !important;
-  float: left;
-}
-.command-shortcut:before {
-  content: "(command mode)";
-  padding-right: 3px;
-  color: #777777;
-}
-.edit-shortcut:before {
-  content: "(edit)";
-  padding-right: 3px;
-  color: #777777;
-}
-[dir="rtl"] .edit-shortcut.pull-right {
-  float: left !important;
-  float: left;
-}
-#find-and-replace #replace-preview .match,
-#find-and-replace #replace-preview .insert {
-  background-color: #BBDEFB;
-  border-color: #90CAF9;
-  border-style: solid;
-  border-width: 1px;
-  border-radius: 0px;
-}
-[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
-  border-left: none;
-}
-[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
-  border-right: none;
-}
-#find-and-replace #replace-preview .replace .match {
-  background-color: #FFCDD2;
-  border-color: #EF9A9A;
-  border-radius: 0px;
-}
-#find-and-replace #replace-preview .replace .insert {
-  background-color: #C8E6C9;
-  border-color: #A5D6A7;
-  border-radius: 0px;
-}
-#find-and-replace #replace-preview {
-  max-height: 60vh;
-  overflow: auto;
-}
-#find-and-replace #replace-preview pre {
-  padding: 5px 10px;
-}
-.terminal-app {
-  background: #eeeeee;
-}
-.terminal-app #header {
-  background: #ffffff;
-  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
-  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
-}
-.terminal-app .terminal {
-  width: 100%;
-  float: left;
-  font-family: monospace;
-  color: white;
-  background: black;
-  padding: 0.4em;
-  border-radius: 2px;
-  -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
-  box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.4);
-  line-height: 1em;
-  font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
-}
-.terminal-app .terminal-cursor {
-  color: black;
-  background: white;
-}
-.terminal-app .terminado-container-container {
-  padding-top: 20px;
-  height: 100%;
-}
-.terminal-app #terminado-container {
-  height: 100%;
-}
-.btn-danger {
-  color: #ffffff;
-  background-color: #df0404;
-  border-color: #df0404;
-}
-.btn-warning {
-  color: #ffffff;
-  background-color: #b46102;
-  border-color: #b46102;
-}
-.close {
-  float: right;
-  font-size: 19.5px;
-  font-weight: bold;
-  line-height: 1;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  filter: alpha(opacity=60);
-  opacity: 0.6;
-}
-.close:hover,
-.close:focus {
-  color: #000000;
-  text-decoration: none;
-  cursor: pointer;
-  filter: alpha(opacity=100);
-  opacity: 1;
-}
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-.navbar-nav > li > a {
-  color: #565656;
-}
-.navbar-nav > li > a:focus {
-  /* -webkit-focus-ring-color = '#5B9DD9' */
-  outline: -webkit-focus-ring-color auto 5px;
-}
-/*# sourceMappingURL=style.min.css.map */
-    </style>
-<style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
-.highlight .c { color: #408080; font-style: italic } /* Comment */
-.highlight .err { border: 1px solid #FF0000 } /* Error */
-.highlight .k { color: #008000; font-weight: bold } /* Keyword */
-.highlight .o { color: #666666 } /* Operator */
-.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
-.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
-.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
-.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
-.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
-.highlight .gd { color: #A00000 } /* Generic.Deleted */
-.highlight .ge { font-style: italic } /* Generic.Emph */
-.highlight .gr { color: #FF0000 } /* Generic.Error */
-.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
-.highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
-.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-.highlight .gs { font-weight: bold } /* Generic.Strong */
-.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
-.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-.highlight .kp { color: #008000 } /* Keyword.Pseudo */
-.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-.highlight .kt { color: #B00040 } /* Keyword.Type */
-.highlight .m { color: #666666 } /* Literal.Number */
-.highlight .s { color: #BA2121 } /* Literal.String */
-.highlight .na { color: #7D9029 } /* Name.Attribute */
-.highlight .nb { color: #008000 } /* Name.Builtin */
-.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
-.highlight .no { color: #880000 } /* Name.Constant */
-.highlight .nd { color: #AA22FF } /* Name.Decorator */
-.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
-.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-.highlight .nf { color: #0000FF } /* Name.Function */
-.highlight .nl { color: #A0A000 } /* Name.Label */
-.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
-.highlight .nv { color: #19177C } /* Name.Variable */
-.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-.highlight .w { color: #bbbbbb } /* Text.Whitespace */
-.highlight .mb { color: #666666 } /* Literal.Number.Bin */
-.highlight .mf { color: #666666 } /* Literal.Number.Float */
-.highlight .mh { color: #666666 } /* Literal.Number.Hex */
-.highlight .mi { color: #666666 } /* Literal.Number.Integer */
-.highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
-.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
-.highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
-.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
-.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
-.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
-.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
-.highlight .sx { color: #008000 } /* Literal.String.Other */
-.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
-.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
-.highlight .ss { color: #19177C } /* Literal.String.Symbol */
-.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
-.highlight .vc { color: #19177C } /* Name.Variable.Class */
-.highlight .vg { color: #19177C } /* Name.Variable.Global */
-.highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
-.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
-    </style>
+  /*# sourceMappingURL=style.min.css.map */
+      </style>
+  <style type="text/css">
+      .highlight .hll { background-color: #ffffcc }
+  .highlight  { background: #f8f8f8; }
+  .highlight .c { color: #408080; font-style: italic } /* Comment */
+  .highlight .err { border: 1px solid #FF0000 } /* Error */
+  .highlight .k { color: #008000; font-weight: bold } /* Keyword */
+  .highlight .o { color: #666666 } /* Operator */
+  .highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+  .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+  .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+  .highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+  .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+  .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+  .highlight .gd { color: #A00000 } /* Generic.Deleted */
+  .highlight .ge { font-style: italic } /* Generic.Emph */
+  .highlight .gr { color: #FF0000 } /* Generic.Error */
+  .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+  .highlight .gi { color: #00A000 } /* Generic.Inserted */
+  .highlight .go { color: #888888 } /* Generic.Output */
+  .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+  .highlight .gs { font-weight: bold } /* Generic.Strong */
+  .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+  .highlight .gt { color: #0044DD } /* Generic.Traceback */
+  .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+  .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+  .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+  .highlight .kp { color: #008000 } /* Keyword.Pseudo */
+  .highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+  .highlight .kt { color: #B00040 } /* Keyword.Type */
+  .highlight .m { color: #666666 } /* Literal.Number */
+  .highlight .s { color: #BA2121 } /* Literal.String */
+  .highlight .na { color: #7D9029 } /* Name.Attribute */
+  .highlight .nb { color: #008000 } /* Name.Builtin */
+  .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+  .highlight .no { color: #880000 } /* Name.Constant */
+  .highlight .nd { color: #AA22FF } /* Name.Decorator */
+  .highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+  .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+  .highlight .nf { color: #0000FF } /* Name.Function */
+  .highlight .nl { color: #A0A000 } /* Name.Label */
+  .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+  .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+  .highlight .nv { color: #19177C } /* Name.Variable */
+  .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+  .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+  .highlight .mb { color: #666666 } /* Literal.Number.Bin */
+  .highlight .mf { color: #666666 } /* Literal.Number.Float */
+  .highlight .mh { color: #666666 } /* Literal.Number.Hex */
+  .highlight .mi { color: #666666 } /* Literal.Number.Integer */
+  .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+  .highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+  .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+  .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+  .highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+  .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+  .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+  .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+  .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+  .highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+  .highlight .sx { color: #008000 } /* Literal.String.Other */
+  .highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+  .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+  .highlight .ss { color: #19177C } /* Literal.String.Symbol */
+  .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+  .highlight .fm { color: #0000FF } /* Name.Function.Magic */
+  .highlight .vc { color: #19177C } /* Name.Variable.Class */
+  .highlight .vg { color: #19177C } /* Name.Variable.Global */
+  .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+  .highlight .vm { color: #19177C } /* Name.Variable.Magic */
+  .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+      </style>
 
 
-<style type="text/css">
-/* Overrides of notebook CSS for static HTML export */
-body {
-  overflow: visible;
-  padding: 8px;
-}
-
-div#notebook {
-  overflow: visible;
-  border-top: none;
-}@media print {
-  div.cell {
-    display: block;
-    page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
+  <style type="text/css">
+  /* Overrides of notebook CSS for static HTML export */
+  body {
+    overflow: visible;
+    padding: 8px;
   }
-  div.output { 
-    display: block;
-    page-break-inside: avoid; 
+
+  div#notebook {
+    overflow: visible;
+    border-top: none;
+  }@media print {
+    div.cell {
+      display: block;
+      page-break-inside: avoid;
+    } 
+    div.output_wrapper { 
+      display: block;
+      page-break-inside: avoid; 
+    }
+    div.output { 
+      display: block;
+      page-break-inside: avoid; 
+    }
   }
-}
-</style>
+  </style>
 
-<!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+  <!-- Custom stylesheet, it must be in the same directory as the html file -->
+  <link rel="stylesheet" href="custom.css">
 
-<!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-            processEscapes: true,
-            processEnvironments: true
-        },
-        // Center justify equations in code and markdown cells. Elsewhere
-        // we use CSS to left justify single line equations in code cells.
-        displayAlign: 'center',
-        "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
-            linebreaks: { automatic: true }
-        }
-    });
-    </script>
-    <!-- End of mathjax configuration --></head>
-<body>
-        <!-- Toolbar -->
-        <div class="topnav">
-            <a class="active" href="index.html">Home</a>
-            <a href="article.html">Articles</a>
-            <a href="write-up.html">Write-up</a>
-            <a href="suggestion.html">Librairy</a>
-            <a href="cp.html">Cypher-Project</a>
-        </div>
-  <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
+  <!-- Loading mathjax macro -->
+  <!-- Load mathjax -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+      <!-- MathJax configuration -->
+      <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true,
+              processEnvironments: true
+          },
+          // Center justify equations in code and markdown cells. Elsewhere
+          // we use CSS to left justify single line equations in code cells.
+          displayAlign: 'center',
+          "HTML-CSS": {
+              styles: {'.MathJax_Display': {"margin": 0}},
+              linebreaks: { automatic: true }
+          }
+      });
+      </script>
+      <!-- End of mathjax configuration --></head>
+  <body>
+            <!-- Toolbar -->
+            <div class="topnav">
+                <a class="active" href="index.html">Home</a>
+                <a href="article.html">Articles</a>
+                <a href="write-up.html">Write-up</a>
+                <a href="suggestion.html">Librairy</a>
+                <a href="cp.html">Cypher-Project</a>
+            </div>
+      <div tabindex="-1" id="notebook" class="border-box-sizing">
+        <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Congruence">Congruence<a class="anchor-link" href="#Congruence">&#182;</a></h1><p>Ce notebook est un cours sur les congruence, sujet introduit en arithmétique modulaire. Nous définirons ce qu'est une congruence ainsi que ses propriétés, nous verrons un cas d'application avec le théorème des restes chinois ainsi qu'un exemple, suivis d'exercices accompagnés de leurs corrigés et enfin des script python afin d'appliquer concrètement ce chapitre.</p>
-<h2 id="D&#233;finition:">D&#233;finition:<a class="anchor-link" href="#D&#233;finition:">&#182;</a></h2><p>Historiquement, la notion de congruence sur les entiers relatifs a été introduite par Gauss vers 1801. Les congruences sont très utiles car elles permettent de ramener des calculs avec de très grands nombres à des calculs avec des nombres raisonnables.</p>
-<p>En arithmétique modulaire, on dit que deux entiers relatifs a et b sont congrus modulo n, avec n $ \in \mathbb{N} $, si et seulement a et b ont le même reste de la division euclidienne par n. Autrement dit, si a modulo n et b modulo n sont égaux, alors a et b sont congru. On note alors: $$ a ≡ b [n] $$</p>
-<p>Nous pouvons ajouter qu'ils sont congrus modulo n si leur différence est un multiple de n. Soit a et b sont congru si: $ (a-b) [n] = 0 $</p>
-<h6 id="Remarque:-je-note-ici-le-modulo,-qui-est-le-reste-d'une-division-euclidienne,-par-n.-a-est-congru-&#224;-b-modulo-n-&#8656;&#8658;-a-&#8801;-b-[n]">Remarque: je note ici le modulo, qui est le reste d'une division euclidienne, par n. a est congru &#224; b modulo n &#8656;&#8658; a &#8801; b [n]<a class="anchor-link" href="#Remarque:-je-note-ici-le-modulo,-qui-est-le-reste-d'une-division-euclidienne,-par-[n].-a-est-congru-&#224;-b-modulo-n-&#8656;&#8658;-a-&#8801;-b-[n]">&#182;</a></h6><p>exemple:</p>
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+    </div><div class="inner_cell">
+    <div class="text_cell_render border-box-sizing rendered_html">
+    <h1 id="Congruence">Congruence<a class="anchor-link" href="#Congruence">&#182;</a></h1><p>Ce notebook est un cours sur les congruence, sujet introduit en arithmétique modulaire. Nous définirons ce qu'est une congruence ainsi que ses propriétés, nous verrons un cas d'application avec le théorème des restes chinois ainsi qu'un exemple, suivis d'exercices accompagnés de leurs corrigés et enfin des script python afin d'appliquer concrètement ce chapitre.</p>
+    <h2 id="D&#233;finition:">D&#233;finition:<a class="anchor-link" href="#D&#233;finition:">&#182;</a></h2><p>Historiquement, la notion de congruence sur les entiers relatifs a été introduite par Gauss vers 1801. Les congruences sont très utiles car elles permettent de ramener des calculs avec de très grands nombres à des calculs avec des nombres raisonnables.</p>
+    <p>En arithmétique modulaire, on dit que deux entiers relatifs a et b sont congrus modulo n, avec n $ \in \mathbb{N} $, si et seulement a et b ont le même reste de la division euclidienne par n. Autrement dit, si a modulo n et b modulo n sont égaux, alors a et b sont congru. On note alors: $$ a ≡ b [n] $$</p>
+    <p>Nous pouvons ajouter qu'ils sont congrus modulo n si leur différence est un multiple de n. Soit a et b sont congru si: $ (a-b) [n] = 0 $</p>
+    <h6 id="Remarque:-je-note-ici-le-modulo,-qui-est-le-reste-d'une-division-euclidienne,-par-n.-a-est-congru-&#224;-b-modulo-n-&#8656;&#8658;-a-&#8801;-b-[n]">Remarque: je note ici le modulo, qui est le reste d'une division euclidienne, par n. a est congru &#224; b modulo n &#8656;&#8658; a &#8801; b [n]<a class="anchor-link" href="#Remarque:-je-note-ici-le-modulo,-qui-est-le-reste-d'une-division-euclidienne,-par-[n].-a-est-congru-&#224;-b-modulo-n-&#8656;&#8658;-a-&#8801;-b-[n]">&#182;</a></h6><p>exemple:</p>
 
-<pre><code>a = 18, b = 23 et n = 5
-18 mod 5 = 3
-23 mod 5 = 3
-Le reste de 18 et 23 divisé par 5 sont identiques, a et b sont donc congru  
-Nous pouvons alors noter: 18 ≡ 23 [5]</code></pre>
-<p>Une autre formulation est la suivante: $$ a ≡ b [n] ⇐⇒ \forall k ∈ \mathbb{Z}, a = b + kn $$</p>
-<p>Notez bien cette forme qui peut être utile pour vous faciliter la tâche dans certains exercices</p>
-<h2 id="Propri&#233;t&#233;s:">Propri&#233;t&#233;s:<a class="anchor-link" href="#Propri&#233;t&#233;s:">&#182;</a></h2><h3 id="1--Relation-d'&#233;quivalence">1- Relation d'&#233;quivalence<a class="anchor-link" href="#1--Relation-d'&#233;quivalence">&#182;</a></h3><p>Dans un ensemble, des éléments similaires du à certaines propriétés sont regroupés et l'on emploit la notion de classe d'équivalence.
-Voici donc les relations d'équivalences parmis les congruences:</p>
-<ul>
-<li>réflexivité: $ \forall  a \in \mathbb{N} $, a ≡ a [n]</li>
-<li>symétrie: $ \forall  a, b \in \mathbb{N} $ a ≡ b [n] $\iff$ b ≡ a [n]</li>
-<li>transitivité: $ \forall a,b, c \in \mathbb{N} $ si a ≡ b [n] et b ≡ c [n] alors a ≡ c [n]</li>
-</ul>
-<h3 id="2--Propri&#233;t&#233;s-alg&#233;briques">2- Propri&#233;t&#233;s alg&#233;briques<a class="anchor-link" href="#2--Propri&#233;t&#233;s-alg&#233;briques">&#182;</a></h3><ul>
-<li>si a ≡ b [n] et c ≡ d [n] alors $ c + d ≡  b + d [n] $</li>
-<li>si a ≡ b [n], alors $ \forall k \in \mathbb{Z} $: $k * a ≡ k * b [n] $</li>
-<li>si a ≡ b [n] et c ≡ d [n] alors $a * c ≡ b * d [n] $ </li>
-<li>$ \forall k \in \mathbb{N} $: $a^k ≡ b^k [n]$</li>
-</ul>
-<h3 id="3--Th&#233;or&#232;me-des-restes-chinois">3- Th&#233;or&#232;me des restes chinois<a class="anchor-link" href="#3--Th&#233;or&#232;me-des-restes-chinois">&#182;</a></h3><p>La forme originale du théorème apparait sous forme de problème dans le livre de Sun Zi, le Sunzi suanjing, datant du IIIe siècle. Il est repris par le mathématicien chinois Qin Jiushao dans son ouvrage le Shùshū Jiǔzhāng (« Traité mathématique en neuf chapitres ») publié en 1247. Le résultat concerne les systèmes de congruences (voir arithmétique modulaire).
-Selon Ulrich Libbrecht, la motivation de ce type de calcul chez les Chinois serait l'astronomie. On peut en effet penser que les Chinois, férus de calculs astronomiques, puissent être intéressés par des concordances de calendrier et qu'ils aient été amenés très tôt à s'intéresser à des questions du type :</p>
-<p>Dans combien de jours la pleine lune tombera-t-elle au solstice d'hiver ?</p>
-<p>Si la question se pose alors qu'il reste 6 jours avant le solstice d'hiver et 3 jours avant la pleine lune, la question se traduit par :
-Existe-t-il un entier x tel que le reste de la division de x par 365 donne 6 et le reste de la division de x par 28 donne 3 ?</p>
-<p>Voyons tout cela sans plus attendre:</p>
-<p>Soient $ m_1, m_2... m_n $ entiers premiers deux à deux entre eux ainsi que $ a_1, a_2... a_n $ entiers naturels non nuls.
-Nous cherchons un entier N tel que: 
-$$N ≡ a_1 [m_1] $$
-$$N ≡ a_2 [m_2] $$
-$$...           $$
-$$N ≡ a_n [m_n] $$</p>
-<p>Nous avons aussi $ m = m_1 * m_2 ... *  m_n $</p>
-<p>Ansi, avec $j \in [1, n]$, on a $pgcd(\dfrac{m}{m_j}; m_j)$ = 1. D'après le théorème de Bézout (la fameux inverse modulaire: <a href="https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Bachet-B%C3%A9zout">https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Bachet-B%C3%A9zout</a>), on a $b_j$ tel que: $$ \dfrac{m}{m_j}*b_j ≡ 1 [m_j]; $$</p>
-$$
-soit: \dfrac{m}{m_j}*b_j * a_j ≡ a_j [m_j] $$<p>Ce que l'on peut résumer par 
-$$
-x_0 = (\sum_{j=1}^{N} \dfrac{m}{m_j} * b_j * a_j) [m_i]
-$$</p>
-<h4 id="Exemple:">Exemple:<a class="anchor-link" href="#Exemple:">&#182;</a></h4>$$x ≡ 3 [17]$$$$x ≡ 4 [11]$$$$x ≡ 5 [6]$$<p>Calculons d'abord $m = 3 * 4 * 5 = 60$. Il faut alors trouver une solution à chacune de ces congruences:</p>
-$$\dfrac{60}{3} * b_1 ≡ 1 [3]$$$$\dfrac{60}{4} * b_1 ≡ 1 [4]$$$$\dfrac{60}{5} * b_1 ≡ 1 [5]$$<p>On obtient alors: $b_1 = 2; b_2 = 3$ et $b_3 = 3$. Alors: 
-$$
-x_0 = (20 * 2 * 2) + (15 * 3 * 1) + (12 * 3 * 3) = 233
-$$</p>
-<p>Donc $x = 233 [60] = 53$, ce qui nous donne: 
-$$ 53 ≡ 2 [3] $$</p>
-$$ 53 ≡ 1 [4] $$$$...$$<p>On peut trouver toutes les autres solutions avec $x = 53 + 60 * k$ avec $k \in \mathbb{Z}$</p>
-<p>Pour les intéressés, voici un petit exercice, avec corrigé, supplémentaire: <a href="https://bibmath.net/crypto/index.php?action=affiche&amp;quoi=complements/resteschinois">https://bibmath.net/crypto/index.php?action=affiche&amp;quoi=complements/resteschinois</a></p>
+    <pre><code>a = 18, b = 23 et n = 5
+    18 mod 5 = 3
+    23 mod 5 = 3
+    Le reste de 18 et 23 divisé par 5 sont identiques, a et b sont donc congru  
+    Nous pouvons alors noter: 18 ≡ 23 [5]</code></pre>
+    <p>Une autre formulation est la suivante: $$ a ≡ b [n] ⇐⇒ \forall k ∈ \mathbb{Z}, a = b + kn $$</p>
+    <p>Notez bien cette forme qui peut être utile pour vous faciliter la tâche dans certains exercices</p>
+    <h2 id="Propri&#233;t&#233;s:">Propri&#233;t&#233;s:<a class="anchor-link" href="#Propri&#233;t&#233;s:">&#182;</a></h2><h3 id="1--Relation-d'&#233;quivalence">1- Relation d'&#233;quivalence<a class="anchor-link" href="#1--Relation-d'&#233;quivalence">&#182;</a></h3><p>Dans un ensemble, des éléments similaires du à certaines propriétés sont regroupés et l'on emploit la notion de classe d'équivalence.
+    Voici donc les relations d'équivalences parmis les congruences:</p>
+    <ul>
+    <li>réflexivité: $ \forall  a \in \mathbb{N} $, a ≡ a [n]</li>
+    <li>symétrie: $ \forall  a, b \in \mathbb{N} $ a ≡ b [n] $\iff$ b ≡ a [n]</li>
+    <li>transitivité: $ \forall a,b, c \in \mathbb{N} $ si a ≡ b [n] et b ≡ c [n] alors a ≡ c [n]</li>
+    </ul>
+    <h3 id="2--Propri&#233;t&#233;s-alg&#233;briques">2- Propri&#233;t&#233;s alg&#233;briques<a class="anchor-link" href="#2--Propri&#233;t&#233;s-alg&#233;briques">&#182;</a></h3><ul>
+    <li>si a ≡ b [n] et c ≡ d [n] alors $ c + d ≡  b + d [n] $</li>
+    <li>si a ≡ b [n], alors $ \forall k \in \mathbb{Z} $: $k * a ≡ k * b [n] $</li>
+    <li>si a ≡ b [n] et c ≡ d [n] alors $a * c ≡ b * d [n] $ </li>
+    <li>$ \forall k \in \mathbb{N} $: $a^k ≡ b^k [n]$</li>
+    </ul>
+    <h3 id="3--Th&#233;or&#232;me-des-restes-chinois">3- Th&#233;or&#232;me des restes chinois<a class="anchor-link" href="#3--Th&#233;or&#232;me-des-restes-chinois">&#182;</a></h3><p>La forme originale du théorème apparait sous forme de problème dans le livre de Sun Zi, le Sunzi suanjing, datant du IIIe siècle. Il est repris par le mathématicien chinois Qin Jiushao dans son ouvrage le Shùshū Jiǔzhāng (« Traité mathématique en neuf chapitres ») publié en 1247. Le résultat concerne les systèmes de congruences (voir arithmétique modulaire).
+    Selon Ulrich Libbrecht, la motivation de ce type de calcul chez les Chinois serait l'astronomie. On peut en effet penser que les Chinois, férus de calculs astronomiques, puissent être intéressés par des concordances de calendrier et qu'ils aient été amenés très tôt à s'intéresser à des questions du type :</p>
+    <p>Dans combien de jours la pleine lune tombera-t-elle au solstice d'hiver ?</p>
+    <p>Si la question se pose alors qu'il reste 6 jours avant le solstice d'hiver et 3 jours avant la pleine lune, la question se traduit par :
+    Existe-t-il un entier x tel que le reste de la division de x par 365 donne 6 et le reste de la division de x par 28 donne 3 ?</p>
+    <p>Voyons tout cela sans plus attendre:</p>
+    <p>Soient $ m_1, m_2... m_n $ entiers premiers deux à deux entre eux ainsi que $ a_1, a_2... a_n $ entiers naturels non nuls.
+    Nous cherchons un entier N tel que: 
+    $$N ≡ a_1 [m_1] $$
+    $$N ≡ a_2 [m_2] $$
+    $$...           $$
+    $$N ≡ a_n [m_n] $$</p>
+    <p>Nous avons aussi $ m = m_1 * m_2 ... *  m_n $</p>
+    <p>Ansi, avec $j \in [1, n]$, on a $pgcd(\dfrac{m}{m_j}; m_j)$ = 1. D'après le théorème de Bézout (la fameux inverse modulaire: <a href="https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Bachet-B%C3%A9zout">https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Bachet-B%C3%A9zout</a>), on a $b_j$ tel que: $$ \dfrac{m}{m_j}*b_j ≡ 1 [m_j]; $$</p>
+    $$
+    soit: \dfrac{m}{m_j}*b_j * a_j ≡ a_j [m_j] $$<p>Ce que l'on peut résumer par 
+    $$
+    x_0 = (\sum_{j=1}^{N} \dfrac{m}{m_j} * b_j * a_j) [m_i]
+    $$</p>
+    <h4 id="Exemple:">Exemple:<a class="anchor-link" href="#Exemple:">&#182;</a></h4>$$x ≡ 3 [17]$$$$x ≡ 4 [11]$$$$x ≡ 5 [6]$$<p>Calculons d'abord $m = 3 * 4 * 5 = 60$. Il faut alors trouver une solution à chacune de ces congruences:</p>
+    $$\dfrac{60}{3} * b_1 ≡ 1 [3]$$$$\dfrac{60}{4} * b_1 ≡ 1 [4]$$$$\dfrac{60}{5} * b_1 ≡ 1 [5]$$<p>On obtient alors: $b_1 = 2; b_2 = 3$ et $b_3 = 3$. Alors: 
+    $$
+    x_0 = (20 * 2 * 2) + (15 * 3 * 1) + (12 * 3 * 3) = 233
+    $$</p>
+    <p>Donc $x = 233 [60] = 53$, ce qui nous donne: 
+    $$ 53 ≡ 2 [3] $$</p>
+    $$ 53 ≡ 1 [4] $$$$...$$<p>On peut trouver toutes les autres solutions avec $x = 53 + 60 * k$ avec $k \in \mathbb{Z}$</p>
+    <p>Pour les intéressés, voici un petit exercice, avec corrigé, supplémentaire: <a href="https://bibmath.net/crypto/index.php?action=affiche&amp;quoi=complements/resteschinois">https://bibmath.net/crypto/index.php?action=affiche&amp;quoi=complements/resteschinois</a></p>
 
-</div>
-</div>
-</div>
     </div>
-  </div>
-</body>
-
- 
-
-
-60}{3} * b_1 ≡ 1 [3]$$</p>
-		<p>$$\dfrac{60}{4} * b_1 ≡ 1 [4]$$</p>
-		<p>$$\dfrac{60}{5} * b_1 ≡ 1 [5]$$</p>
-		<p>On obtient alors: $b_1 = 2; b_2 = 3$ et $b_3 = 3$; Alors:
-		$$
-		x_0 = (20 * 2 * 2) + (15 * 3 * 1) + (12 * 3 * 3) = 233
-		$$</p>
-		<p>Donc $x = 233 [60] = 53$, ce qui nous donne:
-		$$ 53 ≡ 2 [3] $$</p>
-		<p>$$ 53 ≡ 1 [4] $$
-		$$...$$</p>
-		<p>On peut trouver toutes les autres solutions avec $x = 53 + 60 * k$ avec $k \in \mathbb{Z}$</p>
-	</div>
-
-</body>
+    </div>
+    </div>
+        </div>
+      </div>
+  </body> 
 </html>
