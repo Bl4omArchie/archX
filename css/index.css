@@ -1,106 +1,89 @@
-body{
-    background-color: #434551;
-    margin-left: 100px;
-    margin-right: 100px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-h1, h2, h3{
-    color: white;     
-    text-decoration: underline; 
-    text-decoration-thickness: 12%;
-    text-decoration-color: #04AA6D;
-    font-family: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
+h1 {
+    font-size: 2em;
 }
-
-h1{
-    text-align: center;
+h2 {
+    font-size: 1.6em;
 }
-
-h2{
-    margin-left: 10px
-}
-
 h3{
-    margin-left: 5px
+    font-size: 1.3em;
+}
+p{
+    font-size: 1.2em;
 }
 
-p, li{
-    font-size: 18px;
-    color: #fcfcfc;
-    font-family: "Inter", "Helvetica Neue", "Helvetica", sans-serif;
-    font-feature-settings: 'ss01' 1, 'zero' 1;
+body{
+    max-width: 1100px;
+    margin: auto;
+    padding: 2em 4em;
+    box-shadow: 0 0 8px 1px #e5e5e5;
+    min-height: 100vh;
 }
-
-a{
-    font-weight:bold;
-    color: #04AA6D
+header{
+    padding: 1em 0;
 }
-
-form{
-    margin-left: 750px;
+header h1{
+    text-align: center;
+    margin: 1em 0;
 }
-
-input, button{
-    padding: 7px 125px;
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.desc div{
-    overflow:hidden
+header nav a{
+    width: 20%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2em;
+    cursor:pointer;
+    transition: 0.2s;
 }
-
-span{
-    width:100%;
-    margin-left: 325px;
-    margin-top: -15px;
-    display:inline-block;
-    vertical-align:middle;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
+header nav a:hover,h2 a:hover{
+    color: #00A000;
 }
-
-table{
-    margin-left: 125px;
-    margin-right: 125px;
-}
-
-/*Tool bar*/
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #141212;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 7px;
-    overflow: hidden;
-}
-  
-  /* Style the links inside the navigation bar */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    padding: 10px 100px;
+a,a:visited{
     text-decoration: none;
-    font-size: 17px;
-    
+    color: #00A000;
+    transition: .2s;
 }
-  
-/* Change the color of links on hover */
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+p > a{
+    color: #00A000;
+    text-decoration: underline;
 }
-  
-/* Add a color to the active/current link */
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+p,h2,h3{
+    margin: 2em 0;
 }
 
-/* Presentation for write-up and article*/
-.article {
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 50px;
-    line-height: 30px;
+a.active{
+    font-weight: bold;
+    color: #00A000;
 }
-
+table, table td a{
+    font-size: 18px;
+    color: whitesmoke;
+}
+form{
+    margin: 2em 0;
+}
+form input{
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #b4b4b4;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: .2s;
+}
+form button{
+    padding: 0.5em;
+    font-size: 16px;
+    background: none;
+    border: 2px solid #00A000;
+    border-radius: 4px;
+}
