@@ -63,6 +63,7 @@ p,h2,h3{
 a.active{
     font-weight: bold;
     color: #00A000;
+    border-bottom: 2px solid #00A000;
 }
 table, table td a{
     font-size: 18px;
@@ -86,4 +87,7 @@ form button{
     background: none;
     border: 2px solid #00A000;
     border-radius: 4px;
+}
+ul{
+    padding-left: 2em;
 }
