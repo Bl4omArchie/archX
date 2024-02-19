@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.6em;
+}
+h3{
+    font-size: 1.3em;
+}
+p{
+    font-size: 1.2em;
+}
+
+body{
+    max-width: 1100px;
+    margin: auto;
+    padding: 2em 4em;
+    box-shadow: 0 0 8px 1px #e5e5e5;
+    min-height: 100vh;
+}
+header{
+    padding: 1em 0;
+}
+header h1{
+    text-align: center;
+    margin: 1em 0;
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav a{
+    width: 20%;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2em;
+    cursor:pointer;
+    transition: 0.2s;
+}
+header nav a:hover,h2 a:hover{
+    color: #00A000;
+}
+a,a:visited{
+    text-decoration: none;
+    color: #00A000;
+    transition: .2s;
+}
+p > a{
+    color: #00A000;
+    text-decoration: underline;
+}
+p,h2,h3{
+    margin: 2em 0;
+}
+
+a.active{
+    font-weight: bold;
+    color: #00A000;
+    border-bottom: 2px solid #00A000;
+}
+table, table td a{
+    font-size: 18px;
+    color: whitesmoke;
+}
+form{
+    margin: 2em 0;
+}
+form input{
+    width: 50%;
+    max-width: 400px;
+    border: 1px solid #b4b4b4;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: .2s;
+}
+form button{
+    padding: 0.5em;
+    font-size: 16px;
+    background: none;
+    border: 2px solid #00A000;
+    border-radius: 4px;
+}
+ul{
+    padding-left: 2em;
+}
