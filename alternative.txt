@@ -1,5 +1,5 @@
 Privacy:
-- Google (gmail, drive, calendar) -> Protonmail    
+- Google (gmail, drive, calendar) -> Protonmail
 
 - Free VPN: Proton VPN
 
@@ -25,3 +25,4 @@ Social Network:
 Free and open source softwares:
 - VScode -> VScodium
 - Google Analaytics -> Simple Analaytics
+- Github -> Gitlab
