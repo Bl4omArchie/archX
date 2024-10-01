@@ -75,3 +75,29 @@ function setActiveTag(tag) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    // Vérifie si le mode sombre est déjà activé dans le localStorage
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        themeIcon.textContent = '☀️';  // Icône du soleil pour passer en mode clair
+    } else {
+        themeIcon.textContent = '🌙';  // Icône de la lune pour passer en mode nuit
+    }
+
+    toggleButton.addEventListener('click', function () {
+        if (body.classList.contains('dark-mode')) {
+            body.classList.remove('dark-mode');
+            localStorage.setItem('dark-mode', 'disabled');
+            themeIcon.textContent = '🌙';  // Icône de la lune pour passer en mode nuit
+        } else {
+            body.classList.add('dark-mode');
+            localStorage.setItem('dark-mode', 'enabled');
+            themeIcon.textContent = '☀️';  // Icône du soleil pour passer en mode clair
+        }
+    });
+});
