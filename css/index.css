@@ -7,6 +7,10 @@
 h1 {
     font-size: 2em;
 }
+
+h1.page-title {
+    text-align: center;
+}
 h2 {
     font-size: 1.6em;
 }
@@ -52,6 +56,7 @@ a,a:visited{
     color: #00A000;
     transition: .2s;
 }
+
 p > a{
     color: #00A000;
     text-decoration: underline;

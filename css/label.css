@@ -1,0 +1,33 @@
+/* Masquer tous les titres par défaut */
+h3 {
+    display: none;
+}
+
+/* Afficher le titre si un <li> de la catégorie est visible */
+ul:has(li:not([style*="display: none"])) + h3 {
+    display: block;
+}
+
+/* Ajout d'un tag 'all' pour tout afficher */
+.tag-filter {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    padding: 6px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid #04AA6D;
+    transition: background-color 0.3s ease;
+}
+
+.tag-filter.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.tag-filter:hover {
+    background-color: #04AA6D;
+    color: white;
+}

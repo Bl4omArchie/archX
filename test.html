@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>archX</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/label.css">
+</head>
+
+
+<body>
+    <header>
+        <!-- Toolbar -->
+        <nav>
+            <a class="active" href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="open-source.html">Open Source</a>
+            <a href="forum.html">Forum</a>
+            <a href="article.html">Articles</a>
+            <a href="write-up.html">Write-up</a>
+            <a href="ressources.html">Ressources</a>
+        </nav>
+    </header>
+
+    <section>
+        <h1>News</h1>
+        <p>There is every sources I have to stay informed about several topics.</p>
+    </section>
+
+    <section id="tag-filter-section">
+        <h2>Filter by Tags</h2>
+        <button class="tag-filter" data-tag="all">All</button> <!-- Nouveau bouton -->
+        <button class="tag-filter" data-tag="cryptography">Cryptography</button>
+        <button class="tag-filter" data-tag="quantum computing">Quantum Computing</button>
+        <button class="tag-filter" data-tag="artificial intelligence">Artificial Intelligence</button>
+        <button class="tag-filter" data-tag="security">Security</button>
+        <button class="tag-filter" data-tag="hacking">Hacking</button>
+    </section>
+    
+    <hr>
+    
+    <h3>Cryptography</h3>
+    <ul>
+        <li data-tags="cryptography, security">
+            <p>
+                <a href="https://www.schneier.com/news/" target="_blank">Schneier on Security: News</a>
+                Bruce Schneier is a public-interest technologist...
+            </p>
+        </li>
+        <li data-tags="cryptography">
+            <p>
+                <a href="https://www.schneier.com/crypto-gram/" target="_blank">Schneier on Security: Crypto-Gram Newsletter.</a>
+            </p>
+        </li>
+    </ul>
+    
+    <h3>Quantum Computing</h3>
+    <ul>
+        <li data-tags="quantum computing">
+            <p> 
+                🇫🇷 <a href="https://www.oezratty.net/wordpress/" target="_blank">Opinions Libres: le blog d'Olivier Ezratty</a> Podcast, video and books about french quantum computing actuality.
+            </p>
+        </li>
+    </ul>
+    
+    <!-- Other sections... -->    
+
+</body>
+<script src="script.js"></script>
