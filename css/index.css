@@ -19,6 +19,7 @@ h3{
 }
 p{
     font-size: 1.2em;
+    font-family: "Georgia";
 }
 
 #dark-mode-toggle {
@@ -36,7 +37,7 @@ p{
 }
 
 .dark-mode {
-    background-color: #0F0F0F;
+    background: radial-gradient(#171717, #0d0d0d, #000000);
     color: #e0e0e0;
 }
 
@@ -76,8 +77,10 @@ header nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: flex;
 }
 header nav a{
+    flex: 1 1 auto;
     width: 20%;
     padding: 1rem;
     text-align: center;
@@ -87,6 +90,9 @@ header nav a{
 }
 header nav a:hover,h2 a:hover{
     color: #00A000;
+}
+a.active {
+    color: #80c9ff;
 }
 a,a:visited{
     text-decoration: none;
