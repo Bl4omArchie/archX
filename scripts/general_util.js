@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const defaultTag = 'crypto';
+    const defaultTag = 'default';
     showTag(defaultTag);
     setActiveTag(defaultTag);
 
@@ -84,20 +84,33 @@ document.addEventListener('DOMContentLoaded', function () {
     // Vérifie si le mode sombre est déjà activé dans le localStorage
     if (localStorage.getItem('dark-mode') === 'enabled') {
         body.classList.add('dark-mode');
-        themeIcon.textContent = '☀️';  // Icône du soleil pour passer en mode clair
+        themeIcon.textContent = '☀️';
     } else {
-        themeIcon.textContent = '🌙';  // Icône de la lune pour passer en mode nuit
+        themeIcon.textContent = '🌙';
     }
 
     toggleButton.addEventListener('click', function () {
         if (body.classList.contains('dark-mode')) {
             body.classList.remove('dark-mode');
             localStorage.setItem('dark-mode', 'disabled');
-            themeIcon.textContent = '🌙';  // Icône de la lune pour passer en mode nuit
+            themeIcon.textContent = '🌙';
         } else {
             body.classList.add('dark-mode');
             localStorage.setItem('dark-mode', 'enabled');
-            themeIcon.textContent = '☀️';  // Icône du soleil pour passer en mode clair
+            themeIcon.textContent = '☀️';
+        }
+    });
+});
+
+document.querySelectorAll('.tag-filter').forEach(button => {
+    button.addEventListener('click', function() {
+        const tag = this.getAttribute('data-tag');
+        const targetH3 = [...document.querySelectorAll('h3')].find(h3 => 
+            h3.textContent.toLowerCase().includes(tag.toLowerCase())
+        );
+
+        if (targetH3) {
+            targetH3.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });

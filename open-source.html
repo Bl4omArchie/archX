@@ -18,7 +18,7 @@
             <a href="forum.html">Forum</a>
             <a href="article.html">Articles</a>
             <a href="write-up.html">Write-up</a>
-            <a href="ressources.html">Ressources</a>
+            <a href="books.html">Books</a>
             <button id="dark-mode-toggle" class="btn" style="background: none; border: none; cursor: pointer; font-size: 1.5em;">
                 <span id="theme-icon">🌙</span>
             </button>
@@ -32,7 +32,7 @@
 
     <section id="tag-filter-section">
         <button class="tag-filter" data-tag="all">All</button> 
-        <button class="tag-filter" data-tag="crypto">Cryptography</button>
+        <button class="tag-filter" data-tag="default">Cryptography</button>
         <button class="tag-filter" data-tag="prog">Programmation</button>
         <button class="tag-filter" data-tag="ai">Artificial Intelligence</button>
         <button class="tag-filter" data-tag="cyber">Cyber-Security</button>
@@ -40,38 +40,38 @@
 
     <h3>Cryptography</h3>
     <ul>
-        <li data-tags="all allcrypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/openssl/openssl" target="_blank">OpenSSL</a>
                 is a robust, commercial-grade, full-featured Open Source Toolkit for the TLS (formerly SSL), DTLS and QUIC (currently client side only) protocols.
                 The documentation isn't the best but you can use openSSL's library to include header like BigNum, AES, RSA and have fun with it.
             </p>
         </li>
-        <li data-tags="all crypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/Legrandin/pycryptodome" target="_blank">Pycryptodome</a>
                 A self-contained cryptographic library for Python. I think this open source repository is the best for beginners to make their first contribution.
                 Issues are easy to understand, the project isn't big compare to openSSL and you can have a good overview of the whole project.
         </li>
-        <li data-tags="all crypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/Mbed-TLS/mbedtls" target="_blank">MbedTLS</a>
                 An open source, portable, easy to use, readable and flexible TLS library, and reference implementation of the PSA Cryptography API.
                 The documentation is way better than OpenSSL so you can more easily understand the library and code with it.
         </li>
-        <li data-tags="all crypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/zama-ai" target="_blank">Zama-AI</a>
                 is an open source cryptography company building state-of-the-art FHE (Fully Homomorphic Encryption) solutions for blockchain and AI. The project is interesting because it introduces you to FHE and have a bounty program so if your are good and motivated you even can make a bit of money.
             </p>
         </li>
-        <li data-tags="all crypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/veorq/cryptocoding" target="_blank">Cryptocoding</a>
                 is a repository maintained by Jean-Philippe Aumasson, a great cryptographer. It lists "coding rules" for implementations of cryptographic operations, and more generally for operations involving secret or sensitive values. 
                 This page is a very good ressource if you want to develop your own implementation. Of course those recommendations aren't enought for a well secured implementation but as a beginner it is a good training.
         </li>
-        <li data-tags="all crypto">
+        <li data-tags="all default">
             <p>
                 <a href="https://github.com/C2SP/C2SP" target="_blank">CS2P</a>
                 The Community Cryptography Specification Project is a project that facilitates the maintenance of cryptography specifications using software development methodologies. In other words, C2SP applies the successful processes of open source software development and maintenance to specification documents.
@@ -105,6 +105,19 @@
             </p>
         </li>
 
+        <li data-tags="all cyber">
+            <p>
+                <a href="https://github.com/crossroadsfpga/pigasus" target="_blank">Pigasus</a>
+                An IPS based on Snort fully implemented on an FPGA. With this method, the IPS can read a 100Gpbs network traffic without any loss.
+            </p> 
+        </li>
+
+        <li data-tags="all cyber">
+            <p>
+                <a href="https://github.com/DPDK/dpdk" target="_blank">Data Plane Development Kit</a>
+                This tool bypass the kernel to analyze network packages and make packet processing much faster.
+            </p> 
+        </li>
         
     </ul>
 
@@ -173,6 +186,12 @@
                 <p>
                     <a href=" https://en.algorithmica.org/hpc/" target="_blank">Algorithmica</a>
                     is an open-access web book dedicated to the art and science of computing by Sergey Slotin. Its intended audience is everyone from performance engineers and practical algorithm researchers to undergraduate computer science students.
+                </p>
+            </li>
+            <li data-tags="all prog">
+                <p>
+                    <a href="https://github.com/simdjson/simdjson" target="_blank">SimdJson</a>
+                    Created by Daniel Lemire, SimdJson is tool parsing gigabytes of JSON per second. Used by Facebook/Meta Velox, the Node.js runtime and dozen of other real world usage, this tool is certainly one of the fastet in the world for json parsing.
                 </p>
             </li>
         </ul>
