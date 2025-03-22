@@ -8,24 +8,6 @@
 </head>
 
 <body>
-    <style>
-        td, th {
-            padding: 1em;
-        }
-
-        thead {
-            background-color: #557CBA;
-        }
-
-        tfoot {
-            background-color: red;
-        }
-
-        a {
-            color: black;
-        }
-    </style>
-
     <header>
         <!-- Toolbar -->
         <nav>
@@ -35,7 +17,7 @@
             <a href="forum.html">Forum</a>
             <a href="article.html">Articles</a>
             <a href="write-up.html">Write-up</a>
-            <a href="ressources.html">Ressources</a>
+            <a href="books.html">Books</a>
             <button id="dark-mode-toggle" class="btn" style="background: none; border: none; cursor: pointer; font-size: 1.5em;">
                 <span id="theme-icon">🌙</span>
             </button>
@@ -43,7 +25,7 @@
     </header>
 
     <section>
-        <h1 class="page-title">Ressources</h1>
+        <h1 class="page-title">Books</h1>
         <p>Welcome to my library, I'm storing nice reading and papers I had to used for my project</p>
     </section>
 
@@ -65,89 +47,74 @@
         </li>
     </ul>
 
-    <form action="https://duckduckgo.com/" method="get" id="form-search">
-        <input type="text" name="q" id="input-search">
-        <button id="submit-search">Search</button>
-    </form>
+    <section id="tag-filter-section">
+        <button class="tag-filter" data-tag="defaut">All</button> 
+        <button class="tag-filter" data-tag="crypto">Cryptography</button>
+        <button class="tag-filter" data-tag="qc">Quantum computing</button>
+        <button class="tag-filter" data-tag="math">Mathematics</button>
+        <button class="tag-filter" data-tag="nist">NIST standard</button>
+    </section>
 
-    <table>
-        <thead>
-        <tr>
-            <th>Title</th>
-            <th>Author(s)</th>
-            <th>Posted</th>
-            <th>Description</th>
-            <th>Link</th>
-        </tr>
-        </thead>
-
-        <tbody style="background-color : #bc5041;">
-        <tr>
-            <td>SERIOUS CRYPTOGRAPHY a Practical: Introduction to Modern Encryption</td>
-            <td>Jean-Philippe Aumasson</td>
-            <td>2018</td>
-            <td>Interesting book for beginner in cryptography. Talk about classic, modern and quantum cryptography with
+    <ul>
+        <li data-tags="default crypto">
+            <p>
+                <a href="https://palaiologos.rocks/library/Serious%20Cryptography%20Jean-Philippe%20Aumasson.pdf" target="_blank">Serious Cryptography a Practical: Introduction to Modern Encryption</a>
+                Interesting book for beginner in cryptography. Talk about classic, modern and quantum cryptography with
                 example of application in python or golang. Every thing is pretty easy to understand and it give you a
-                really good overview of cryptography.
-            </td>
-            <td><a href="https://palaiologos.rocks/library/Serious%20Cryptography%20Jean-Philippe%20Aumasson.pdf" target="_blank"> LINK</a></td>
-        </tr>
-
-        <tr>
-            <td>Mathematics of Public Key Cryptography</td>
-            <td> Steven Galbraith</td>
-            <td>2012</td>
-            <td> This book gives a rigorous presentation of most of the mathematics underlying public
+                really good overview of cryptography <br/>
+                Author: Jean-Philippe Aumasson - 2018.
+            </p>
+        </li>
+        <li data-tags="default crypto math">
+            <p>
+                <a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/main.pdf" target="_blank">Mathematics of Public Key Cryptography</a>
+                This book gives a rigorous presentation of most of the mathematics underlying public
                 key cryptography. Our main focus is mathematics. We put mathematical precision and
                 rigour ahead of generality, practical issues in real-world cryptography, or algorithmic
-                optimality.
-            </td>
-            <td><a href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/main.pdf" target="_blank">LINK</a></td>
-        </tr>
-
-        <tr>
-            <td>An Introduction to Mathematical Cryptography</td>
-            <td>Hoffstein, Jeffrey, Pipher, Jill, Silverman, J.H</td>
-            <td></td>
-            <td>Detailed introduction to elliptic curves and how they're used in cryptography, including the “hot” recent
+                optimality. <br/>
+                Author: Steven Galbraith - 2012.
+            </p>
+        </li>
+        <li data-tags="default crypto math">
+            <p>
+                <a href="https://link.springer.com/book/10.1007/978-1-4939-1711-2" target="_blank">An Introduction to Mathematical Cryptography</a>
+                Detailed introduction to elliptic curves and how they're used in cryptography, including the “hot” recent
                 topic of elliptic curve pairing-based cryptography
                 Detailed introduction to lattices and lattice based cryptography. Provides an entry for graduate students
                 into an active field of research. Includes exercises and examples at the end of each section. A standard
-                reference for researchers in the field. May be implemented in a classroom setting or independent study
-            </td>
-            <td><a href="https://link.springer.com/book/10.1007/978-1-4939-1711-2"
-                target="_blank"> LINK</a></td>
-        </tr>
-
-        </tbody>
-
-        <tbody style="background-color : #d2aa85;">
-        <tr>
-            <td>Understanding Quantum Technologies</td>
-            <td>Olivier Ezratty</td>
-            <td>27 september 2021</td>
-            <td>Olivier Ezratty advises and trains businesses and public services in the development of their innovation
+                reference for researchers in the field. May be implemented in a classroom setting or independent study <br/>
+                Author: Hoffstein, Jeffrey, Pipher, Jill, Silverman, J.H.
+            </p>
+        </li>
+        <li data-tags="default crypto">
+            <p>
+                <a href="https://palaiologos.rocks/library/Serious%20Cryptography%20Jean-Philippe%20Aumasson.pdf" target="_blank">Serious Cryptography a Practical: Introduction to Modern Encryption</a>
+                Interesting book for beginner in cryptography. Talk about classic, modern and quantum cryptography with
+                example of application in python or golang. Every thing is pretty easy to understand and it give you a
+                really good overview of cryptography <br/>
+                Author: Jean-Philippe Aumasson - 2018.
+            </p>
+        </li>
+        <li data-tags="default">
+            <p>
+                <a href="https://q4quanta.github.io/qcdocs/" target="_blank">Introductory Quantum Computing </a>
+                This online document helps the absolute beginners to persue in the future direction in coding and Quantum
+                Computing. The lesson starts with fundamental of qubits, quantum gates and quantum circuits and quantum
+                algorithms.
+            </p>
+        </li>
+        <li data-tags="default">
+            <p>
+                <a href="https://www.oezratty.net/wordpress/2024/understanding-quantum-technologies-2024/" target="_blank">Understanding quantum technologies 2024</a>
+                Olivier Ezratty advises and trains businesses and public services in the development of their innovation
                 strategies
                 around deep techs and, in particular, quantum technologies. He brings them a 360° understanding of
                 scientific,
-                technology, marketing as well as ecosystems development.
-            </td>
-            <td><a href="https://www.oezratty.net/wordpress/2021/understanding-quantum-technologies-2021/" target="_blank">
-                LINK</a></td>
-        </tr>
-
-        <tr>
-            <td>Introductory Quantum Computing</td>
-            <td>#</td>
-            <td>#</td>
-            <td>This online document helps the absolute beginners to persue in the future direction in coding and Quantum
-                Computing. The lesson starts with fundamental of qubits, quantum gates and quantum circuits and quantum
-                algorithms.
-            </td>
-            <td><a href="https://q4quanta.github.io/qcdocs/" target="_blank"> LINK</a></td>
-        </tr>
-
-
+                technology, marketing as well as ecosystems development.<br/>
+                Author: Olivier Ezratty - 27 september 2021.
+            </p>
+        </li>
+    </ul>
         </tbody>
 
         <tbody style="background-color: #9361ef;">
@@ -161,19 +128,6 @@
             </td>
             <td><a href="https://bl4omarchie.github.io/archX/pdf/animal_crossing.pdf" target=_blank> LINK</a></td>
         </tr>
-
-        <tr>
-            <td>🇫🇷 PGCD - PPCM Théorèmes de Bézout et de Gauss</td>
-            <td>Paul Milan</td>
-            <td>15 juillet 2016</td>
-            <td>Cours avec démonstration du PGCD, PPCM, théorème de Bézout et de Gauss. Théorie des nombres et arithmétique
-                modulaire
-            </td>
-            <td>
-                <a href="https://www.lyceedadultes.fr/sitepedagogique/documents/math/mathTermSspe/02_PGCD_PPCM/02_cours_pgcd_ppcm_bezout_gauss.pdf"
-                target="_blank"> LINK</a></td>
-        </tr>
-
         </tbody>
 
         <tbody style="background-color : #0e95c1;">
