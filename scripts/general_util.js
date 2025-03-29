@@ -1,3 +1,7 @@
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const defaultTag = 'default';
     showTag(defaultTag);

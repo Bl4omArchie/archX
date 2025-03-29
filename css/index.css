@@ -12,13 +12,16 @@ h1.page-title {
     text-align: center;
 }
 h2 {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 h3{
     font-size: 1.3em;
 }
 p{
     font-size: 1.2em;
+}
+section{
+    font-size: clamp(14px, 2vw, 18px);
 }
 
 #dark-mode-toggle {
@@ -36,7 +39,7 @@ p{
 }
 
 .dark-mode {
-    background-color: #0F0F0F;
+    background-color: #201f1f;
     color: #e0e0e0;
 }
 
@@ -64,6 +67,7 @@ body{
     padding: 2em 4em;
     box-shadow: 0 0 8px 1px #e5e5e5;
     min-height: 100vh;
+    padding-top: 80px;
 }
 header{
     padding: 1em 0;
@@ -72,10 +76,17 @@ header h1{
     text-align: center;
     margin: 1em 0;
 }
-header nav{
+header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed; /* Fixe la barre en haut de la page */
+    top: 0; /* Alignement en haut */
+    left: 0;
+    width: 100%; /* Occupe toute la largeur */
+    background-color: #fff; /* Assurez-vous que la barre est bien visible */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile */
+    z-index: 1000; /* S'assure qu'elle reste au-dessus du contenu */
 }
 header nav a{
     width: 20%;
@@ -132,4 +143,7 @@ form button{
 }
 ul{
     padding-left: 2em;
+}
+p.contact{
+    text-align: center;
 }
