@@ -20,8 +20,16 @@ h3{
 p{
     font-size: 1.2em;
 }
-section{
-    font-size: clamp(14px, 2vw, 18px);
+@media (min-width: 1700px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 2500px) {
+    body {
+        font-size: 17px;
+    }
 }
 
 #dark-mode-toggle {

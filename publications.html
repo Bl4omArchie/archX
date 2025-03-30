@@ -17,7 +17,7 @@
             <a href="forum.html">Forum</a>
             <a href="article.html">Articles</a>
             <a href="write-up.html">Write-up</a>
-            <a href="books.html">Books</a>
+            <a href="publications.html">Publications</a>
             <button id="dark-mode-toggle" class="btn" style="background: none; border: none; cursor: pointer; font-size: 1.5em;">
                 <span id="theme-icon">🌙</span>
             </button>
@@ -33,6 +33,7 @@
         <button class="tag-filter" data-tag="all">All</button> 
         <button class="tag-filter" data-tag="default">Cryptography</button>
         <button class="tag-filter" data-tag="qc">Quantum computing</button>
+        <button class="tag-filter" data-tag="cyber">Cybersecurity</button>
         <button class="tag-filter" data-tag="math">Mathematics</button>
         <button class="tag-filter" data-tag="nist">NIST standard</button>
     </section>
@@ -45,7 +46,7 @@
                     Interesting book for beginner in cryptography. Talk about classic, modern and quantum cryptography with
                     example of application in python or golang. Every thing is pretty easy to understand and it give you a
                     really good overview of cryptography <br/>
-                    Author: Jean-Philippe Aumasson - 2018.
+                    <strong>Author: Jean-Philippe Aumasson - 2018.</strong>
                 </p>
             </li>
             <li data-tags="all default math">
@@ -55,7 +56,7 @@
                     key cryptography. Our main focus is mathematics. We put mathematical precision and
                     rigour ahead of generality, practical issues in real-world cryptography, or algorithmic
                     optimality. <br/>
-                    Author: Steven Galbraith - 2012.
+                    <strong>Author: Steven Galbraith - 2012.</strong>
                 </p>
             </li>
             <li data-tags="all default math">
@@ -66,7 +67,14 @@
                     Detailed introduction to lattices and lattice based cryptography. Provides an entry for graduate students
                     into an active field of research. Includes exercises and examples at the end of each section. A standard
                     reference for researchers in the field. May be implemented in a classroom setting or independent study <br/>
-                    Author: Hoffstein, Jeffrey, Pipher, Jill, Silverman, J.H.
+                    <strong>Authors: Hoffstein, Jeffrey, Pipher, Jill, Silverman, J.H.</strong>
+                </p>
+            </li>
+            <li data-tags="all default">
+                <p>
+                    <a href="https://www.schneier.com/wp-content/uploads/2015/12/fortuna.pdf" target="_blank">Cryptography Engineering Design Principles and Practical Applications</a>
+                    Chapter 9 about generating randomness and the implementation of Fortuna PRNG.<br/>
+                    <strong>Authors : Niels Ferguson - Bruce Schneier - Tadayoshi Kohno</strong>
                 </p>
             </li>
             <li data-tags="all math">
@@ -94,7 +102,24 @@
                     around deep techs and, in particular, quantum technologies. He brings them a 360° understanding of
                     scientific,
                     technology, marketing as well as ecosystems development.<br/>
-                    Author: Olivier Ezratty - 2024.
+                    <strong>Author: Olivier Ezratty</strong>
+                </p>
+            </li>
+        </ul>
+
+        <ul>
+            <li data-tags="all cyber">
+                <p>
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9601406/pdf/entropy-24-01503.pdf" target="_blank">Comparison of Entropy Calculation Methods for Ransomware Encrypted File Identification</a> <br/>
+                    This paper present several methods of entropy calculation in order to detect if the file has been encrypted or not. It is a very precious work for malware detection which is a very sensitive field. <br/>
+                    <strong>Authors : Simon R. Davies - Richard Macfarlane - William J. Buchanan - 2022</strong>
+                </p>
+            </li>
+            <li data-tags="all cyber">
+                <p>
+                    <a href="https://scispace.com/pdf/an-advanced-quantum-entropy-based-ransomware-detection-7frizpwm4qb4.pdf" target="_blank">An Advanced Quantum-Entropy Based Ransomware Detection Mechanism</a>
+                    Another paper about malware detection but this time with a new method based on quantum entropy. It proposed a new algorithm called QEDD.
+                    <strong>Eric Mazunin - Ronald Bishop - Elizabeth Carter - Lawrence Knight - 2024</strong>
                 </p>
             </li>
         </ul>
@@ -121,7 +146,13 @@
             <li data-tags="all nist">
                 <p>
                     <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf" target="_blank">Announcing the ADVANCED ENCRYPTION STANDARD (AES)</a>
-                    FIPS approved standard for the The Advanced Encryption Standard (AES) cryptographic algorithm
+                    FIPS approved standard for the The Advanced Encryption Standard (AES) cryptographic algorithm.
+                </p>
+            </li>
+            <li data-tags="all nist">
+                <p>
+                    <a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank">NIST Releases First 3 Finalized Post-Quantum Encryption Standards</a>
+                    This page leads to the first three pulication of the NIST for Post-Quantum encryption standards. You can read about Module-Lattice-Based Digital Signature Standard, Key encapsulation and stateless hash-based DSA.  
                 </p>
             </li>
         </ul>

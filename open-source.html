@@ -18,7 +18,7 @@
             <a href="forum.html">Forum</a>
             <a href="article.html">Articles</a>
             <a href="write-up.html">Write-up</a>
-            <a href="books.html">Books</a>
+            <a href="publications.html">Publications</a>
             <button id="dark-mode-toggle" class="btn" style="background: none; border: none; cursor: pointer; font-size: 1.5em;">
                 <span id="theme-icon">🌙</span>
             </button>
@@ -33,9 +33,9 @@
     <section id="tag-filter-section">
         <button class="tag-filter" data-tag="all">All</button> 
         <button class="tag-filter" data-tag="default">Cryptography</button>
-        <button class="tag-filter" data-tag="prog">Programmation</button>
+        <button class="tag-filter" data-tag="hpc">High Performance Computing</button>
         <button class="tag-filter" data-tag="ai">Artificial Intelligence</button>
-        <button class="tag-filter" data-tag="cyber">Cyber-Security</button>
+        <button class="tag-filter" data-tag="cyber">Cybersecurity</button>
     </section>
 
     <section>
@@ -91,9 +91,9 @@
             </li>
             <li data-tags="all cyber">
                 <p>
-                    <a href="https://github.com/PiRogueToolSuite" target="_blank">PiRogueToolSuite</a>
-                    is an open-source consensual digital forensic analysis and incident response solution. The project consists of an open-source tool suite that provides a comprehensive mobile device forensics and network traffic analysis platform targeting mobile devices, both for Android and iOS.
-                    You have two main tools: PiRogue, a RaspberryPI analyzing network traffic in real time and Colander, an incident response and knowledge management platform.
+                    <a href="https://www.stratosphereips.org/" target="_blank">Stratosphere lab</a>
+                    This amazing Czech laboratory publishes various of content such as dataset, tools, white papers all around the theme of detecting malicious connexion in a network.
+                    Their website is very wide and you have plenty of things to discover. 
                 </p>
             </li>
 
@@ -156,39 +156,25 @@
         </ul>
 
         <ul>
-            <h4>Web Programmation</h4>
-            <ul>
-                <li data-tags="all prog">
-                    <p>
-                        <a href="https://tauri.app/" target="_blank">Tauri</a>
-                        is a framework for building tiny and fast binaries for cross-platform desktop application. Developers can integrate any front-end framework that compiles to HTML, JS and CSS for building their user interface. The backend of the application is a rust-sourced binary with an API that the front-end can interact with.
-                        Tauri is an alternative to Electron and have the benefit to not be based on Chromium.
-                    </p>
-                </li>
-            </ul>
-
-            <h4>High Performance Computing</h4>
-            <ul>
-                <li data-tags="all prog">
-                    <p>
-                        <a href="https://github.com/HigherOrderCO/Bend" target="_blank">Bend language</a>
-                        A promising high-level, massively parallel programming language. Bend have the particularity to parallelize automatically every single mathematical operation allowing you to exploit 100% of your GPU without having to handle thread creation, locks, mutexes, or atomics.
-                        Bend is cross-platform, available on WSL2 and can support 10000 concurrent thread. Only Nvidia's GPU are supported for the moment.
-                    </p>
-                </li>
-                <li data-tags="all prog">
-                    <p>
-                        <a href=" https://en.algorithmica.org/hpc/" target="_blank">Algorithmica</a>
-                        is an open-access web book dedicated to the art and science of computing by Sergey Slotin. Its intended audience is everyone from performance engineers and practical algorithm researchers to undergraduate computer science students.
-                    </p>
-                </li>
-                <li data-tags="all prog">
-                    <p>
-                        <a href="https://github.com/simdjson/simdjson" target="_blank">SimdJson</a>
-                        Created by Daniel Lemire, SimdJson is tool parsing gigabytes of JSON per second. Used by Facebook/Meta Velox, the Node.js runtime and dozen of other real world usage, this tool is certainly one of the fastet in the world for json parsing.
-                    </p>
-                </li>
-            </ul>
+            <li data-tags="all hpc">
+                <p>
+                    <a href="https://github.com/HigherOrderCO/Bend" target="_blank">Bend language</a>
+                    A promising high-level, massively parallel programming language. Bend have the particularity to parallelize automatically every single mathematical operation allowing you to exploit 100% of your GPU without having to handle thread creation, locks, mutexes, or atomics.
+                    Bend is cross-platform, available on WSL2 and can support 10000 concurrent thread. Only Nvidia's GPU are supported for the moment.
+                </p>
+            </li>
+            <li data-tags="all hpc">
+                <p>
+                    <a href=" https://en.algorithmica.org/hpc/" target="_blank">Algorithmica</a>
+                    is an open-access web book dedicated to the art and science of computing by Sergey Slotin. Its intended audience is everyone from performance engineers and practical algorithm researchers to undergraduate computer science students.
+                </p>
+            </li>
+            <li data-tags="all hpc">
+                <p>
+                    <a href="https://github.com/simdjson/simdjson" target="_blank">SimdJson</a>
+                    Created by Daniel Lemire, SimdJson is tool parsing gigabytes of JSON per second. Used by Facebook/Meta Velox, the Node.js runtime and dozen of other real world usage, this tool is certainly one of the fastet in the world for json parsing.
+                </p>
+            </li>
         </ul>
     </section>
 
