@@ -1,0 +1,55 @@
+.dark-mode {
+    background-color: #201f1f;
+    color: #e0e0e0;
+}
+
+.dark-mode-button {
+    text-align: right;
+}
+
+.dark-mode a.active {
+    color: #80c9ff;
+    border-bottom: 2px solid #80c9ff;
+}
+
+.dark-mode form input {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode form button {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-mode #tag-filter-section {
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+.dark-mode #tag-filter-section .tag-filter {
+    color: #80c9ff;
+    background-color: #444;
+    border: 1px solid #80c9ff;
+}
+
+.dark-mode #tag-filter-section .tag-filter:hover {
+    background-color: #80c9ff;
+    color: #333;
+}
+
+.dark-mode #tag-filter-section .tag-filter.active {
+    background-color: #4da6ff;
+    color: #fff;
+    border-color: #4da6ff;
+}
+
+.dark-mode table th {
+    background-color: #444;
+    color: #e0e0e0;
+}
+
+.dark-mode table td {
+    background-color: #333;
+    color: #e0e0e0;
+}

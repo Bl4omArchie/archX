@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('header nav a').forEach(function(link) {
         if (link.getAttribute('href') === currentPage) {
             link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('header nav a').forEach(function(link) {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 });
@@ -32,11 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Fonction pour afficher les éléments ayant un tag spécifique
 function showTag(tag) {
     document.querySelectorAll('li').forEach(function (li) {
-        const liTags = li.getAttribute('data-tags').toLowerCase();
-        if (liTags.includes(tag.toLowerCase())) {
-            li.style.display = 'block';
-        } else {
-            li.style.display = 'none';
+        if (li && li.getAttribute('data-tags')) {
+            const liTags = li.getAttribute('data-tags').toLowerCase();
+            if (liTags.includes(tag.toLowerCase())) {
+                li.style.display = 'block';
+            } else {
+                li.style.display = 'none';
+            }
         }
     });
     updateTitlesVisibility();
@@ -118,3 +133,43 @@ document.querySelectorAll('.tag-filter').forEach(button => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const contextMenu = document.createElement('ul');
+    contextMenu.classList.add('custom-context-menu');
+    contextMenu.id = 'context-menu';
+    contextMenu.innerHTML = `
+        <li onclick="location.reload()">Reload Page</li>
+        <li onclick="downloadPage()">Download</li>
+        <li onclick="copyText()">Copy</li>
+    `;
+    document.body.appendChild(contextMenu);
+
+    document.addEventListener('contextmenu', (event) => {
+        event.preventDefault();
+        contextMenu.style.top = `${event.clientY}px`;
+        contextMenu.style.left = `${event.clientX}px`;
+        contextMenu.style.display = 'block';
+    });
+
+    document.addEventListener('click', () => {
+        contextMenu.style.display = 'none';
+    });
+});
+
+function downloadPage() {
+    const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'page.html';
+    link.click();
+}
+
+function copyText() {
+    var copyText = document.getElementById("myInput");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyText.value);
+}

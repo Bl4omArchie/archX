@@ -1,0 +1,43 @@
+table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2em 0;
+    border-radius: 10px;
+}
+
+table th, table td {
+    border: none;
+    padding: 0.8em;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+}
+
+table th {
+    color: #333;
+}
+
+table td {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-left: none;
+    border-right: none;
+}
+
+table td:first-child {
+    font-weight: bold;
+    text-align: left;
+}
+
+table td.performance-good {
+    background-color: #d4f8d4;
+}
+
+table td.performance-average {
+    background-color: #ffe4b3;
+}
+
+table td.performance-poor {
+    background-color: #f8d4d4;
+}

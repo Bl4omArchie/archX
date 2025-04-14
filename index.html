@@ -4,18 +4,18 @@
     <title>archX</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="icon" href="/img/logo.png">
 </head>
 
 
 <body>
     <header>
-        <h1>ArchX - Cryptography and computing</h1>
-        <!-- Toolbar -->
         <nav>
             <a href="index.html">Home</a>
             <a href="news.html">News</a>
             <a href="open-source.html">Open Source</a>
+            <a href="data_structure.html">Data structure</a>
             <a href="forum.html">Forum</a>
             <a href="article.html">Articles</a>
             <a href="write-up.html">Write-up</a>
@@ -24,6 +24,9 @@
                 <span id="theme-icon">🌙</span>
             </button>
         </nav>
+    </header>
+    <header>
+        <h1>ArchX - Cryptography and computing</h1>
     </header>
 
 
@@ -57,7 +60,11 @@
         </p>
     </section>
 
-    <script src="scripts/general_util.js"></script>
+    <ul class="custom-context-menu" id="context-menu">
+        <li onclick="location.reload()">Reload Page</li>
+        <li onclick="downloadPage()">Download</li>
+    </ul>
 
+    <script src="scripts/general_util.js"></script>
 </body>
 </html>
