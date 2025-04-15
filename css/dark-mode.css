@@ -3,6 +3,10 @@
     color: #e0e0e0;
 }
 
+#dark-mode-toggle {
+    outline: none;
+}
+
 .dark-mode-button {
     text-align: right;
 }
@@ -52,4 +56,14 @@
 .dark-mode table td {
     background-color: #333;
     color: #e0e0e0;
+}
+
+.dark-mode .custom-context-menu {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+.dark-mode .custom-context-menu li:hover {
+    background-color: #444;
 }

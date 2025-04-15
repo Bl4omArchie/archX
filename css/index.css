@@ -7,7 +7,7 @@
 h1 {
     font-size: 2.5em;
     font-family: 'Georgia', serif;
-    line-height: 1.4;
+    line-height: 1.2;
     margin-bottom: 0.5em;
 }
 
@@ -32,7 +32,7 @@ p {
 }
 @media (min-width: 1700px) {
     body {
-        font-size: 14px;
+        font-size: 13.5px;
     }
 }
 
@@ -40,10 +40,6 @@ p {
     body {
         font-size: 17px;
     }
-}
-
-#dark-mode-toggle {
-    outline: none;
 }
 
 #theme-icon {
@@ -85,10 +81,10 @@ header nav {
     z-index: 1000;
 }
 header nav a {
-    width: 20%;
+    width: 10%;
     padding: 1rem;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.15em;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -162,14 +158,4 @@ p.contact {
 
 .custom-context-menu li:hover {
     background-color: #f0f0f0;
-}
-
-.dark-mode .custom-context-menu {
-    background-color: #333;
-    color: #e0e0e0;
-    border: 1px solid #555;
-}
-
-.dark-mode .custom-context-menu li:hover {
-    background-color: #444;
 }
