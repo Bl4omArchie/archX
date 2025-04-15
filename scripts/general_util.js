@@ -95,6 +95,8 @@ function setActiveTag(tag) {
     });
 }
 
+
+// DARK MODE LISTENER
 document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('dark-mode-toggle');
     const body = document.body;

@@ -1,5 +1,8 @@
 .dark-mode {
-    background-color: #201f1f;
+    --primary-color: #201f1f;
+    --secondary-color: #333;
+
+    background-color: var(--primary-color);
     color: #e0e0e0;
 }
 
@@ -7,14 +10,21 @@
     outline: none;
 }
 
+.dark-mode nav {
+    background-color: var(--primary-color);
+
+
+    color: #e0e0e0;
+}
+
 .dark-mode-button {
     text-align: right;
 }
 
-.dark-mode a.active {
+/* .dark-mode a.active {
     color: #80c9ff;
     border-bottom: 2px solid #80c9ff;
-}
+} */
 
 .dark-mode form input {
     background-color: #333;
