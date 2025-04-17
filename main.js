@@ -16,6 +16,10 @@ const colorSetLight = {
     text: "#333",
     
     boxShadow: "rgba(0, 0, 0, 0.2)",
+
+    performanceGood: "#d4f8d4",
+    performanceAverage: "#ffe4b3",
+    performancePoor: "#f8d4d4",
 };
 
 const colorSetDark = {
@@ -32,6 +36,10 @@ const colorSetDark = {
     text: "#DDD",
     
     boxShadow: "rgba(0, 0, 0, 1)",
+
+    performanceGood: "#d4f8d4",
+    performanceAverage: "#ffe4b3",
+    performancePoor: "#f8d4d4",
 };
 
 window.onload = () => {
@@ -78,6 +86,9 @@ function updateColors(colorSet) {
     root.style.setProperty("--tertiary-var", colorSet.tertiaryVariant);
     root.style.setProperty("--text", colorSet.text);
     root.style.setProperty("--box-shadow", colorSet.boxShadow);
+    root.style.setProperty("--performance-good", colorSet.performanceGood);
+    root.style.setProperty("--performance-average", colorSet.performanceAverage);
+    root.style.setProperty("--performance-poor", colorSet.performancePoor);
 }
 
 function setSelectedPage(page) {
@@ -89,7 +100,7 @@ function setSelectedPage(page) {
 }
 
 function loadPage(page) {
-    const path = "subpages/" + page.toLowerCase().replaceAll(" ", "") + ".html"
+    const path = "subpages/" + page.replaceAll(" ", "") + ".html"
     const main_content = document.getElementById("main-content")
 
     main_content.children = null
@@ -114,7 +125,7 @@ function loadPage(page) {
 function BolderizeLink(page) {
     Array.from(document.getElementsByTagName("header")[0].children)
         .forEach((child) => {
-            if (child.textContent.trim() === page.trim()) child.classList.add("selected-link");
+            if (child.getAttribute('type') === page) child.classList.add("selected-link");
             else child.classList.remove("selected-link");
         });
 }

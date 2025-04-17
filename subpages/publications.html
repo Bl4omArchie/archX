@@ -3,8 +3,8 @@
 
 <div class="filtered-list-container">
 
-    <section id="filters">
-        <button onclick="addOrRemoveFilter('default')" type="default" class="filter-button">Cryptography</button>
+    <section id="filters" class="filters">
+        <button onclick="addOrRemoveFilter('crypto')" type="crypto" class="filter-button">Cryptography</button>
         <button onclick="addOrRemoveFilter('qc')" type="qc" class="filter-button">Quantum Computing</button>
         <button onclick="addOrRemoveFilter('cyber')" type="cyber" class="filter-button">Cybersecurity</button>
         <button onclick="addOrRemoveFilter('math')" type="math" class="filter-button">Mathematics</button>
@@ -12,7 +12,7 @@
     </section>
 
     <div id="filtered-list" class="list">
-        <div class="list-item" type="" data-tags="all default">
+        <div class="list-item" type="crypto">
             <a class="list-item-link"
                 href="https://palaiologos.rocks/library/Serious%20Cryptography%20Jean-Philippe%20Aumasson.pdf"
                 target="_blank">Serious Cryptography a Practical: Introduction to Modern Encryption</a>
@@ -26,7 +26,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all default math">
+        <div class="list-item" type="crypto math">
             <a class="list-item-link" href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/main.pdf"
                 target="_blank">Mathematics of
                 Public Key Cryptography</a>
@@ -41,7 +41,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all default math">
+        <div class="list-item" type="crypto math">
             <a class="list-item-link" href="https://link.springer.com/book/10.1007/978-1-4939-1711-2" target="_blank">An
                 Introduction to
                 Mathematical Cryptography</a>
@@ -60,7 +60,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all default">
+        <div class="list-item" type="crypto">
             <a class="list-item-link" href="https://www.schneier.com/wp-content/uploads/2015/12/fortuna.pdf"
                 target="_blank">Cryptography
                 Engineering Design Principles and Practical Applications</a>
@@ -72,7 +72,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all math">
+        <div class="list-item" type="math">
             <a class="list-item-link" href="https://core.ac.uk/download/pdf/81113716.pdf" target="_blank">Interaction
                 Combinators</a>
             <p class="list-item-description">
@@ -85,8 +85,8 @@
             </p>
         </div>
 
-        <div data-tags="all math">
-            <a class="list-item-link" href="https://bl4omarchie.github.io/archX/pdf/animal_crossing.pdf"
+        <div class="list-item" type="math">
+            <a class="list-item-link" href="../pdf/animal_crossing.pdf"
                 target="_blank">Animal Crossing
                 est NP Difficile</a>
             <p class="list-item-description">
@@ -95,7 +95,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all qc">
+        <div class="list-item" type="qc">
             <a class="list-item-link" href="https://q4quanta.github.io/qcdocs/" target="_blank">Introductory Quantum
                 Computing </a>
             <p class="list-item-description">
@@ -106,7 +106,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all qc">
+        <div class="list-item" type="qc">
             <a class="list-item-link"
                 href="https://www.oezratty.net/wordpress/2024/understanding-quantum-technologies-2024/"
                 target="_blank">Understanding quantum technologies 2024</a>
@@ -122,7 +122,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all qc">
+        <div class="list-item" type="qc">
             <a class="list-item-link" href="https://arxiv.org/pdf/2203.02386" target="_blank">Quantum algorithms for
                 estimating quantum
                 entropies</a>
@@ -135,7 +135,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all cyber">
+        <div class="list-item" type="cyber">
             <a class="list-item-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9601406/pdf/entropy-24-01503.pdf"
                 target="_blank">Comparison of Entropy Calculation Methods for Ransomware Encrypted File
                 Identification</a>
@@ -149,7 +149,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all cyber">
+        <div class="list-item" type="cyber">
             <a class="list-item-link"
                 href="https://scispace.com/pdf/an-advanced-quantum-entropy-based-ransomware-detection-7frizpwm4qb4.pdf"
                 target="_blank">An Advanced Quantum-Entropy Based Ransomware Detection Mechanism</a>
@@ -162,7 +162,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all nist">
+        <div class="list-item" type="nist">
             <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.186-4.pdf"
                 target="_blank">Digital Signature
                 Standard - FIPS PUB 186-4</a>
@@ -175,7 +175,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all nist">
+        <div class="list-item" type="nist">
             <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Br2.pdf"
                 target="_blank">Recommendation for Pair-Wise Key Establishment Using Integer Factorization
                 Cryptography</a>
@@ -188,7 +188,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all nist">
+        <div class="list-item" type="nist">
             <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf"
                 target="_blank">Announcing the
                 ADVANCED ENCRYPTION STANDARD (AES)</a>
@@ -197,7 +197,7 @@
             </p>
         </div>
 
-        <div class="list-item" type="" data-tags="all nist">
+        <div class="list-item" type="nist">
             <a class="list-item-link"
                 href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"
                 target="_blank">NIST Releases First 3 Finalized Post-Quantum Encryption Standards</a>

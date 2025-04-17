@@ -1,0 +1,191 @@
+<p class="title">Data structure</p>
+
+<div class="filtered-list-container">
+    <section id="filters" class="filters">
+        <button onclick="addOrRemoveFilter('time-complexity')" type="time-complexity" class="filter-button">Time
+            complexity</button>
+        <button onclick="addOrRemoveFilter('space-complexity')" type="space-complexity" class="filter-button">
+            Space complexity</button>
+    </section>
+
+    <div class="list" id="filtered-list">
+        <div class="list-item" type="time-complexity">
+            <p class="list-item-label">
+                time complexity:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Structure</th>
+                        <th>Access</th>
+                        <th>Search</th>
+                        <th>Insertion</th>
+                        <th>Deletion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Array</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                    </tr>
+                    <tr>
+                        <td>Stack</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Queue</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Singly Linked List</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Doubly Linked List</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-poor">O(n)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Hash Table</td>
+                        <td>-</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Binary Search Tree</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                    </tr>
+                    <tr>
+                        <td>AVL Tree</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                    </tr>
+                    <tr>
+                        <td>Red-Black Tree</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                        <td class="performance-average">O(log n)</td>
+                    </tr>
+                    <tr>
+                        <td>Graph (Adjacency List)</td>
+                        <td>-</td>
+                        <td class="performance-poor">O(V + E)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="list-item" type="space-complexity">
+            <p class="list-item-label">
+                space complexity:
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Structure</th>
+                        <th>Access</th>
+                        <th>Search</th>
+                        <th>Insertion</th>
+                        <th>Deletion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Array</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Stack</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Queue</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Singly Linked List</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Doubly Linked List</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Hash Table</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Binary Search Tree</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>AVL Tree</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Red-Black Tree</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                    <tr>
+                        <td>Graph (Adjacency List)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                        <td class="performance-good">O(1)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
