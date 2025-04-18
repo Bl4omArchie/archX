@@ -116,7 +116,7 @@ td:first-child, th:first-child {
 #main-content {
     box-sizing: border-box;
 
-    width: min(100%, 950px);
+    width: min(100%, 1150px);
     min-height: 100vh;
     padding: min(10%, 4rem);
     margin: auto;

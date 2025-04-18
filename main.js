@@ -1,4 +1,4 @@
-let selected_page = "Home";
+let selected_page = "home";
 let currentFilter = "";
 let darkMode = "false";
 
@@ -50,7 +50,11 @@ window.onload = () => {
 
 function loadCookies() {
     darkMode = loadCookie("darkMode") == "true"
-    selected_page = loadCookie("selectedPage") || "Home"
+    selected_page = loadCookie("selectedPage")
+    console.log(selected_page)
+    if (selected_page == "" || selected_page == null || !selected_page) {
+        selected_page = "home"
+    }
 }
 
 function loadCookie(cookieId) {
@@ -100,7 +104,8 @@ function setSelectedPage(page) {
 }
 
 function loadPage(page) {
-    const path = "subpages/" + page.replaceAll(" ", "") + ".html"
+    const path = ("subpages/" + page.replaceAll(" ", "") + ".html").toLowerCase()
+    console.log(path)
     const main_content = document.getElementById("main-content")
 
     main_content.children = null
