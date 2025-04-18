@@ -1,0 +1,211 @@
+<p class="title">Publications</p>
+<p class="padding-bottom">Welcome to my library, I'm storing nice reading and papers I had to used for my project</p>
+
+<div class="filtered-list-container">
+
+    <section id="filters" class="filters">
+        <button onclick="addOrRemoveFilter('crypto')" type="crypto" class="filter-button">Cryptography</button>
+        <button onclick="addOrRemoveFilter('qc')" type="qc" class="filter-button">Quantum Computing</button>
+        <button onclick="addOrRemoveFilter('cyber')" type="cyber" class="filter-button">Cybersecurity</button>
+        <button onclick="addOrRemoveFilter('math')" type="math" class="filter-button">Mathematics</button>
+        <button onclick="addOrRemoveFilter('nist')" type="nist" class="filter-button">NIST Standards</button>
+    </section>
+
+    <div id="filtered-list" class="list">
+        <div class="list-item" type="crypto">
+            <a class="list-item-link"
+                href="https://palaiologos.rocks/library/Serious%20Cryptography%20Jean-Philippe%20Aumasson.pdf"
+                target="_blank">Serious Cryptography a Practical: Introduction to Modern Encryption</a>
+            <p class="list-item-description">
+                Interesting book for beginner in cryptography. Talk about classic, modern and quantum cryptography with
+                example of application in python or golang. Every thing is pretty easy to understand and it give you a
+                really good overview of cryptography
+            </p>
+            <p class="list-item-reference">
+                Author: Jean-Philippe Aumasson - 2018.
+            </p>
+        </div>
+
+        <div class="list-item" type="crypto math">
+            <a class="list-item-link" href="https://www.math.auckland.ac.nz/~sgal018/crypto-book/main.pdf"
+                target="_blank">Mathematics of
+                Public Key Cryptography</a>
+            <p class="list-item-description">
+                This book gives a rigorous presentation of most of the mathematics underlying public
+                key cryptography. Our main focus is mathematics. We put mathematical precision and
+                rigour ahead of generality, practical issues in real-world cryptography, or algorithmic
+                optimality.
+            </p>
+            <p class="list-item-reference">
+                Author: Steven Galbraith - 2012.
+            </p>
+        </div>
+
+        <div class="list-item" type="crypto math">
+            <a class="list-item-link" href="https://link.springer.com/book/10.1007/978-1-4939-1711-2" target="_blank">An
+                Introduction to
+                Mathematical Cryptography</a>
+            <p class="list-item-description">
+                Detailed introduction to elliptic curves and how they're used in cryptography, including the “hot”
+                recent
+                topic of elliptic curve pairing-based cryptography
+                Detailed introduction to lattices and lattice based cryptography. Provides an entry for graduate
+                students
+                into an active field of research. Includes exercises and examples at the end of each section. A standard
+                reference for researchers in the field. May be implemented in a classroom setting or independent study
+
+            </p>
+            <p class="list-item-reference">
+                Authors: Hoffstein, Jeffrey, Pipher, Jill, Silverman, J.H.
+            </p>
+        </div>
+
+        <div class="list-item" type="crypto">
+            <a class="list-item-link" href="https://www.schneier.com/wp-content/uploads/2015/12/fortuna.pdf"
+                target="_blank">Cryptography
+                Engineering Design Principles and Practical Applications</a>
+            <p class="list-item-description">
+                Chapter 9 about generating randomness and the implementation of Fortuna PRNG.<br />
+            </p>
+            <p class="list-item-reference">
+                Authors : Niels Ferguson - Bruce Schneier - Tadayoshi Kohno
+            </p>
+        </div>
+
+        <div class="list-item" type="math">
+            <a class="list-item-link" href="https://core.ac.uk/download/pdf/81113716.pdf" target="_blank">Interaction
+                Combinators</a>
+            <p class="list-item-description">
+                Yves Lafont is a french mathematician who developed Interaction Nets, a graphical model of computation.
+                Based on this work, the company High Order Company is developing, the highly parallel, Bend language.
+
+            </p>
+            <p class="list-item-reference">
+                Yves Lafont - 1990
+            </p>
+        </div>
+
+        <div class="list-item" type="math">
+            <a class="list-item-link" href="../pdf/animal_crossing.pdf"
+                target="_blank">Animal Crossing
+                est NP Difficile</a>
+            <p class="list-item-description">
+                Bien entendu, dire qu’Animal Crossing est NP-Difficile est un abus de langage... Cependant, les
+                mécaniques du jeu sont assez complexes pour rapidement faire émerger de tels problèmes ! Voyons cela !
+            </p>
+        </div>
+
+        <div class="list-item" type="qc">
+            <a class="list-item-link" href="https://q4quanta.github.io/qcdocs/" target="_blank">Introductory Quantum
+                Computing </a>
+            <p class="list-item-description">
+                This online document helps the absolute beginners to persue in the future direction in coding and
+                Quantum
+                Computing. The lesson starts with fundamental of qubits, quantum gates and quantum circuits and quantum
+                algorithms.
+            </p>
+        </div>
+
+        <div class="list-item" type="qc">
+            <a class="list-item-link"
+                href="https://www.oezratty.net/wordpress/2024/understanding-quantum-technologies-2024/"
+                target="_blank">Understanding quantum technologies 2024</a>
+            <p class="list-item-description">
+                Olivier Ezratty advises and trains businesses and public services in the development of their innovation
+                strategies
+                around deep techs and, in particular, quantum technologies. He brings them a 360° understanding of
+                scientific,
+                technology, marketing as well as ecosystems development.<br />
+            </p>
+            <p class="list-item-reference">
+                Author: Olivier Ezratty
+            </p>
+        </div>
+
+        <div class="list-item" type="qc">
+            <a class="list-item-link" href="https://arxiv.org/pdf/2203.02386" target="_blank">Quantum algorithms for
+                estimating quantum
+                entropies</a>
+            <p class="list-item-description">
+                This paper present quantum algorithms for Quantum entropy. It presents the Von Neumann and Rényi
+                methods.<br />
+            </p>
+            <p class="list-item-reference">
+                Authors: Youle Wang - Benchi Zhao - Xin Wang
+            </p>
+        </div>
+
+        <div class="list-item" type="cyber">
+            <a class="list-item-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9601406/pdf/entropy-24-01503.pdf"
+                target="_blank">Comparison of Entropy Calculation Methods for Ransomware Encrypted File
+                Identification</a>
+            <p class="list-item-description">
+                This paper present several methods of entropy calculation in order to detect if the file has been
+                encrypted or not. It is a very precious work for malware detection which is a very sensitive field.
+
+            </p>
+            <p class="list-item-reference">
+                Authors : Simon R. Davies - Richard Macfarlane - William J. Buchanan - 2022
+            </p>
+        </div>
+
+        <div class="list-item" type="cyber">
+            <a class="list-item-link"
+                href="https://scispace.com/pdf/an-advanced-quantum-entropy-based-ransomware-detection-7frizpwm4qb4.pdf"
+                target="_blank">An Advanced Quantum-Entropy Based Ransomware Detection Mechanism</a>
+            <p class="list-item-description">
+                Another paper about malware detection but this time with a new method based on quantum entropy. It
+                proposed a new algorithm called QEDD.
+            </p>
+            <p class="list-item-reference">
+                Eric Mazunin - Ronald Bishop - Elizabeth Carter - Lawrence Knight - 2024
+            </p>
+        </div>
+
+        <div class="list-item" type="nist">
+            <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.186-4.pdf"
+                target="_blank">Digital Signature
+                Standard - FIPS PUB 186-4</a>
+            <p class="list-item-description">
+                This Standard specifies a suite of algorithms that can be used to generate a digital signature.
+                Digital signatures are used to detect unauthorized modifications to data and to authenticate the
+                identity of the signatory. This standard also specifies DSA (digital signature algorithm) which is used
+                to
+                implement public key cryptography more securely such as RSA, DH or EC.
+            </p>
+        </div>
+
+        <div class="list-item" type="nist">
+            <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Br2.pdf"
+                target="_blank">Recommendation for Pair-Wise Key Establishment Using Integer Factorization
+                Cryptography</a>
+            <p class="list-item-description">
+                This Recommendation specifies key-establishment schemes using integer factorization
+                cryptography (in particular, RSA). Both key-agreement and key transport schemes are specified for pairs
+                of
+                entities, and methods for key confirmation are included to provide assurance that both parties share the
+                same keying material. In addition, the security properties associated with each scheme are provided.
+            </p>
+        </div>
+
+        <div class="list-item" type="nist">
+            <a class="list-item-link" href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf"
+                target="_blank">Announcing the
+                ADVANCED ENCRYPTION STANDARD (AES)</a>
+            <p class="list-item-description">
+                FIPS approved standard for the The Advanced Encryption Standard (AES) cryptographic algorithm.
+            </p>
+        </div>
+
+        <div class="list-item" type="nist">
+            <a class="list-item-link"
+                href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards"
+                target="_blank">NIST Releases First 3 Finalized Post-Quantum Encryption Standards</a>
+            <p class="list-item-description">
+                This page leads to the first three pulication of the NIST for Post-Quantum encryption standards. You can
+                read about Module-Lattice-Based Digital Signature Standard, Key encapsulation and stateless hash-based
+                DSA.
+            </p>
+        </div>
+    </div>
+</div>
