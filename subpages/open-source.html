@@ -7,6 +7,7 @@
         <button class="filter-button" onclick="addOrRemoveFilter('hpc')" type="hpc">High Performance Computing</button>
         <button class="filter-button" onclick="addOrRemoveFilter('ai')" type="ai">Artificial Intelligence</button>
         <button class="filter-button" onclick="addOrRemoveFilter('cyber')" type="cyber">Cybersecurity</button>
+        <button class="filter-button" onclick="addOrRemoveFilter('osint')" type="cyber">Osint</button>
     </section>
     
     <div class="list" id="filtered-list">
@@ -51,7 +52,7 @@
         <div class="list-item" type="default">
             <a class="list-item-link" href="https://github.com/veorq/cryptocoding" target="_blank">Cryptocoding</a>
             <p class="list-item-description">
-                is a repository maintained by Jean-Philippe Aumasson, a great cryptographer. It
+                Cryptocoding is a repository maintained by Jean-Philippe Aumasson, a great cryptographer. It
                 lists "coding rules" for implementations of cryptographic operations, and more generally for operations
                 involving secret or sensitive values.
                 This page is a very good ressource if you want to develop your own implementation. Of course those
@@ -72,7 +73,7 @@
         <div class="list-item" type="cyber">
             <a class="list-item-link" href="https://github.com/amark/gun" target="_blank">GUN</a>
             <p class="list-item-description">
-                is a peer2peer protocol that share data between several machines in live. With
+                GUN is a peer2peer protocol that share data between several machines in live. With
                 encryption, serializaion of the data and more you can easily build an application based on this protocol
                 like alternative to Youtube, Zoom or Facebook.
                 The protocol is implemented in JS and you can integrate it easily in your HTML with CDNs headers or directly
@@ -112,6 +113,20 @@
             <p class="list-item-description">
                 This tool bypass the kernel to analyze network packages and make packet
                 processing much faster.
+            </p>
+        </div>
+
+        <div class="list-item" type="osint">
+            <a class="list-item-link" href="https://github.com/ivre/ivre" target="_blank">IVRE</a>
+            <p class="list-item-description">
+                Network recon framework. Build your own, self-hosted and fully-controlled alternatives to Shodan / ZoomEye / Censys and GreyNoise, run your Passive DNS service, build your taylor-made EASM tool, collect and analyse network intelligence from your sensors, and much more!
+            </p>
+        </div>
+
+        <div class="list-item" type="osint">
+            <a class="list-item-link" href="https://github.com/mxrch/GHunt" target="_blank">GHunt</a>
+            <p class="list-item-description">
+                GHunt is an OSINT tool which scraps any gmail account.
             </p>
         </div>
         
